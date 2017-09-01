@@ -36,7 +36,7 @@ tags: vim
 
 - with custom setting file
 
-  >  $ vim -u {custom_setting_file}.vim
+  >  $ vim -u {*custom_setting_file*}.vim
 
 
 
