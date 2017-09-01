@@ -5,7 +5,7 @@ category: vim
 tags: vim
 ---
 
-
+$~$
 
 # Getting Started
 
@@ -19,8 +19,7 @@ tags: vim
 
   > $ apt-get install vim
 
-
-
+$~$
 
 ### Run
 
@@ -28,18 +27,15 @@ tags: vim
 
   > $ vim
 
-
 - with factory settings
 
   >  $ vim -u NONE -N
 
-
 - with custom setting file
 
-  >  $ vim -u {*custom_setting_file*}.vim
+  >  $ vim -u {*custom\_setting\_file*}.vim
 
-
-
+$~$
 
 ### Reference
 
