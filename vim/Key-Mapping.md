@@ -5,7 +5,7 @@ category: vim
 tags: vim
 ---
 
-
+$~$
 
 # Key Mapping
 
@@ -37,8 +37,7 @@ Vim은 key mapping을 통하여 원하는 동작을 단축키로 설정할 수 �
 
 또, :map과 같이 인자없이 명령어만 입력할 경우 현재 정의된 key mapping 목록을 볼 수 있다.
 
-
-
+$~$
 
 ### remapping
 
@@ -69,8 +68,7 @@ Vim의 key mapping은 remapping이 가능하다. 그렇기 때문에 기본적�
 - :ino[remap] {lhs} {rhs}
 - :cno[remap] {lhs} {rhs}
 
-
-
+$~$
 
 ### unmapping
 
@@ -94,8 +92,7 @@ Vim의 key mapping은 remapping이 가능하다. 그렇기 때문에 기본적�
 - :imapc[lear]
 - :cmapc[lear]
 
-
-
+$~$
 
 ### Key mapping vs Abbreviation
 
@@ -105,14 +102,14 @@ Abbreviation은 mapping된 key를 입력하고 non-word character를 입력하�
 
 Abbreviation은 입력 도중 실수해도 수정을 할 수 있고, key mapping은 불가능하다.
 
-
-
+$~$
 
 ### Reference
 
-- :h usr_40  (|40.1| - Key Mapping)
+- :h usr\_40  (|40.1| - Key Mapping)
 - :h map.txt
-- :h map-<script>
-- :h map-<buffer>
-- :h map-<unique>
+- :h map-\<script>
+- :h map-\<buffer>
+- :h map-\<unique>
+
 
