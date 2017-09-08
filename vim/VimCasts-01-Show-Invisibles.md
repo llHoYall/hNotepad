@@ -30,6 +30,7 @@ set listchars=tab:▸\, eol:¬
 
 
 
+
 위 문자를 원하는 색상으로 변경할 수도 있다. 다음의 코드를 colorscheme 파일에 추가한다.
 
 ~~~vim
