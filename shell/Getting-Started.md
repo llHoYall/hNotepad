@@ -5,7 +5,7 @@ category: shell
 tags: [shell, bash]
 ---
 
-$~$
+&nbsp;
 
 # Getting Started
 
@@ -13,7 +13,7 @@ $~$
 
 > $ echo \$SHELL
 
-$~$
+&nbsp;
 
 ##### Shell script 작성
 
@@ -24,37 +24,36 @@ $~$
 echo "Hello World!"
 ```
 
-$~$
+&nbsp;
 
 ##### 파일 형식 확인
 
 > $ file {*filename*}
 
-$~$
+&nbsp;
 
 ##### 문법 체크
 
 > $ sh -n {*filename*}
 
-$~$
+&nbsp;
 
 ##### 파일에 실행 권한 부여
 
 > $ chmod +x {*filename*}
 
-$~$
+&nbsp;
 
 ##### 실행
 
 경로와 파일명을 사용하여 실행한다.
 
 > $ {*path*}/{*filename*}
->
 > $ ./{*filename*}
 
 .은 현재 디렉토리를 의미한다.
 
-$~$
+&nbsp;
 
 ### Option
 
