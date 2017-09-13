@@ -5,7 +5,7 @@ category: MachineLearning
 tags: MachineLearning
 ---
 
-$~$
+&nbsp;
 
 # Machine Learning
 
@@ -14,6 +14,14 @@ $~$
 머신러닝은 학습 데이터로부터 모델을 찾아내는 귀납적 기법이다.
 
 학습 데이터로 얻은 모델에 입력 데이터를 넣어서 결과를 얻는 과정을 추론(Inference)이라고 한다.
+
+~~~mermaid
+graph LR
+	D[학습 데이터] -.-> E(머신러닝)
+  E -.-> B
+	A[입력 데이터] --> B[모델]
+	B --> C[결과]
+~~~
 
 머신러닝의 난제는 바로 학습 데이터와 입력 데이터가 차이가 나는 데서 기인한다.
 
