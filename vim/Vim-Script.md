@@ -11,6 +11,12 @@ tags: vim
 
 ## Introduction
 
+- 8, 10, 16진수의 숫자를 사용할 수 있다. 8진수는 숫자0을 앞에 붙여서 표현하고, 16진수는 0x를 앞에 붙여 표현한다.
+- Leading 공백 문자는 무시된다.
+- 주석은 double quote로 시작한다.
+
+
+
 :echo 명령어를 사용하여 인자 값을 출력할 수 있다.
 
 :sleep 명령어를 사용하여 잠시 멈출 수 있다.
@@ -19,12 +25,6 @@ tags: vim
 :sleep 4	" 4 seconds
 :sleep 50m	" 50 milliseconds
 ~~~
-
-
-
-8, 10, 16진수의 숫자를 사용할 수 있다.
-
-8진수는 숫자0을 앞에 붙여서 표현하고, 16진수는 0x를 앞에 붙여 표현한다.
 
 &nbsp;
 
@@ -226,8 +226,22 @@ key를 인덱스로 value를 뽑을 수 있다.
 Dictionary에 함수를 넣을 수도 있다.
 
 > function dict.key(*parameters*) dict
-> ​	{statements}
+> ​	{*statements*}
 > endfunction
+
+&nbsp;
+
+## Exception
+
+예외 처리는 다음의 문법과 같다.
+
+> try
+> ​	{*expression*}
+> catch {*errorcode*}
+> ​	{*statements*}
+> finally
+> ​	{*statements*}
+> endtry
 
 &nbsp;
 
