@@ -23,10 +23,24 @@ echo 명령을 사용하면 기본적으로 자동으로 개행을 한다.
 
 이것을 막으려면 **\-n** 옵션을 사용한다.
 
-~~~sh
+```sh
 echo -n "We are "
 echo "the same line."
-~~~
+```
+
+위의 명령은 internal shell command이다. external shell command로 같은 동작을 하려면 다음과 같이 한다.
+
+```sh
+/bin/echo -n "We are "
+/bin/echo "the same line."
+```
+
+printf 명령을 사용해도 같은 동작을 한다.
+
+```sh
+printf "We are "
+printf "the same line.\n"
+```
 
 &nbsp;
 
