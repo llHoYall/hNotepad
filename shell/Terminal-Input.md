@@ -53,6 +53,38 @@ Echo back을 하지 않으면 사용자의 입력이 출력으로 보이지 않�
 
 &nbsp;
 
+## 사용자 입력 메뉴
+
+다음의 코드는 메뉴를 사용하는 예이다.
+
+~~~sh
+while :
+do
+	echo "1) list file"
+	echo "2) show current directory"
+	echo "3) exit"
+	echo -n "Input menu: "
+	read menu
+	
+	case $menu in
+		1)
+			ls
+			;;
+		2)
+			pwd
+			;;
+		3)
+			exit
+			;;
+		*)
+			echo "Error: Unknown command"
+	esac
+	echo
+   done
+~~~
+
+&nbsp;
+
 ## 파일 읽으면서 사용자 입력 받기
 
 다음은 file.txt 파일로부터 한 줄씩 읽고 출력을 하면서, 사용자로부터 디렉토리를 입력받아 해당 디렉토리의 목록을 출력하는 코드이다.
