@@ -5,7 +5,7 @@ category: vim
 tags: vim
 ---
 
-$~$
+&nbsp;
 
 # Getting Started
 
@@ -19,7 +19,7 @@ $~$
 
   > $ apt-get install vim
 
-$~$
+&nbsp;
 
 ### Run
 
@@ -35,7 +35,7 @@ $~$
 
   >  $ vim -u {*custom\_setting\_file*}.vim
 
-$~$
+&nbsp;
 
 ### Reference
 
