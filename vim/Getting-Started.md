@@ -23,17 +23,26 @@ tags: vim
 
 ### Run
 
-- with default setting file (.vimrc)
+실행은 다음과 같이 한다.
 
-  > $ vim
+> $ vim [*arguments*] \[*files* ...]
 
-- with factory settings
+vim을 실행하면 기본 설정 파일로 실행이 된다.
 
-  >  $ vim -u NONE -N
+다음과 같이 하면, 깨끗한 상태로 실행이 된다.
 
-- with custom setting file
+> $ vim -u NONE -N
 
-  >  $ vim -u {*custom\_setting\_file*}.vim
+
+
+자주 사용하는 arguments 들은 다음과 같다.
+
+- -N : Vi와 호환되지 않는다. nocompatible.
+- -u \<*vimrc*> : 명시한 설정파일로 실행을 한다.
+- --noplugin : 플러그인 스크립트를 실행하지 않는다.
+- -p : 파일 별로 하나씩 N개의 탭을 연다. 
+- -o : 파일 별로 하나씩 N개의 수평분할 창을 연다.
+- -O : 파일 별로 하나씩 N개의 수직분할 창을 연다.
 
 &nbsp;
 
