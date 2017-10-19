@@ -19,6 +19,8 @@ tags: [os, unix, mac, linux]
 
 > $ {*cmd*} &
 
+background로 실행중인 작업을 중지 시키려면 먼저 foreground로 옮긴 후 suspend 시켜야 한다.
+
 다음 명령은 해당 작업을 foreground/background로 옮긴다.
 
 > $ fg %{*job id*}
