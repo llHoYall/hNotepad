@@ -5,7 +5,7 @@ category: vim
 tags: vim
 ---
 
-$~$
+&nbsp;
 
 # Help
 
@@ -13,12 +13,12 @@ $~$
 
 도움말을 보려면 다음의 명령어를 사용한다.
 
-- :help {cmd} - N 모드 명령어
-- :help v\_{cmd} - V 모드 명령어
-- :help i\_{cmd} - I 모드 명령어
-- :help :{cmd} - C 모드 명령어
-- :help c\_{cmd} - C 모드 편집 명령어
-- :hep -{arg} - vim 명령어 인자
+- :help {cmd} - N-Mode 명령어.
+- :help i\_{cmd} - I-Mode 명령어.
+- :help :{cmd} - C-Mode 명령어.
+- :help c\_{cmd} - C-Mode 편집 명령어. 특수 키.
+- :help v\_{cmd} - V-Mode 명령어
+- :hep -{arg} - vim 실행 인자
 - :help 'option' - vim 옵션
 - :help /{RegExp} - 정규표현식
 
@@ -31,7 +31,7 @@ $~$
 > :h[elp] ctrl-w\_n
 > :h[elp] ctrl-r\_ctrl-f
 
-$~$
+&nbsp;
 
 ### Move and Jump
 
@@ -43,13 +43,13 @@ $~$
 - l - 오른쪽
 - \<CTRL-]> - 커서가 위치한 태그로 이동
 - \<CTRL-t> - 되돌아 가기
-- :tags - 이동한 태크 목록을 보여준다.
+- :tags - 이동한 태크들의 목록을 보여준다.
 
-$~$
+&nbsp;
 
 ### Close
 
-도움말을 종료하려면 다음의 명령어를 사용한다.
+도움말을 종료하려면 다음의 명령어를 사용한다.z
 
 - :q
 
