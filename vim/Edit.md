@@ -49,3 +49,14 @@ V-Mode일 때
 - u : 소문자로
 - U : 대문자로
 
+
+&nbsp;
+
+## Alignment
+
+- :ce\[nter] [*width*] - 중앙 정렬.
+- :ri\[ght] [*width*] - 우측 정렬.
+- :le\[ft] [*width*] - 좌측 정렬.
+
+width를 지정해주지 않으면 설정된 tw 값을 기준으로 정렬한다.
+
