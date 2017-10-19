@@ -30,6 +30,7 @@ tags: vim
 - ts=*value* (tabstop) - tab을 눌렀을 때의 간격.
 - sw=*value* (shiftwidth) - 블록 단위 간격. 즉 cindent에 영향을 준다.
 - tw=*value* (textwidth) - 화면의 너비. 이 값보다 긴 문장은 자동 개행된다. 0이면 disable.
+- ff=value (fileformat) - 파일 포맷을 변경할 수 있다. 주로 dos (CR+LF), unix (LF), mac (CR) 을 사용한다.
 
 &nbsp;
 
@@ -46,6 +47,7 @@ vim에는 옵션 외에도 설정할 수 있는 기능들이 있다. 옵션이 �
 - :syntax clear - 문법 체크 기능을 사용하지 않는다. 현재 창에만 적용된다.
 - :syntax off - 문법 체크 기능을 사용하지 않는다. 기능을 완전히 중지하고, 모든 버퍼에서 삭제한다.
 - :colo[rscheme] {*scheme*} - 해당 색상 테마를 사용한다. 문법 체크 기능과 연동된다.
+- :hls[earch] - 검색 시 하이라이팅을 해준다.
 
 &nbsp;
 
