@@ -31,6 +31,14 @@ tags: vim
 - sw=*value* (shiftwidth) - 블록 단위 간격. 즉 cindent에 영향을 준다.
 - tw=*value* (textwidth) - 화면의 너비. 이 값보다 긴 문장은 자동 개행된다. 0이면 disable.
 - ff=value (fileformat) - 파일 포맷을 변경할 수 있다. 주로 dos (CR+LF), unix (LF), mac (CR) 을 사용한다.
+- fenc=value (fileencoding) - 파일 인코딩을 변경할 수 있다.
+  - utf-8, utf8
+  - ucs-bom
+  - korea : 유닉스에서는 euc-kr, 윈도우즈에서는 cp949로 자동 변환.
+  - euc-kr : 유닉스에서만 사용 가능
+  - cp949 : 유닉스, 윈도우즈 모두 사용 가능
+  - japan : 유닉스에서는 euc-jp, 윈도우즈에서는 cp932로 자동 변환.
+  - latin1, ansi : ascii 형식
 
 &nbsp;
 
