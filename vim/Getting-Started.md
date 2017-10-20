@@ -71,5 +71,6 @@ vim을 실행하면 기본 설정 파일로 실행이 된다.
 
 - http://www.vim.org
 - http://vimcasts.org
+- http://vim.wikia.com/wiki/Vim_Tips_Wiki
 
 
