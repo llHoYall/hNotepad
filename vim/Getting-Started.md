@@ -37,6 +37,7 @@ vim을 실행하면 기본 설정 파일로 실행이 된다.
 
 자주 사용하는 arguments 들은 다음과 같다.
 
+- -d : vimdiff
 - -N : Vi와 호환되지 않는다. nocompatible.
 - -u \<*vimrc*> : 명시한 설정파일로 실행을 한다.
 - --noplugin : 플러그인 스크립트를 실행하지 않는다.
