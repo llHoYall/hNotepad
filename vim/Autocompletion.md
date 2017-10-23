@@ -21,3 +21,11 @@ C-Mode에선 모두 사용 가능하다.
 
 도움말, 옵션 설정, 기능 설정 등도 Ex-command를 이용하기 때문에 모두 사용 가능하다.
 
+&nbsp;
+
+### Keyword Completion
+
+- \<CTRL-n> : I-Mode에서 단어 자동 완성.
+- \<CTRL-x> + \<CTRL-n> :  I-Mode에서 확장된 단어 자동 완성.
+- \<CTRL-x> + \<CTRL-k> + \<CTRL-n> : 사전 참조 자동 완성.
+
