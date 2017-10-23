@@ -30,6 +30,7 @@ tags: vim
 - ts=*value* (tabstop) - tab을 눌렀을 때의 간격.
 - sw=*value* (shiftwidth) - 블록 단위 간격. 즉 cindent에 영향을 준다.
 - tw=*value* (textwidth) - 화면의 너비. 이 값보다 긴 문장은 자동 개행된다. 0이면 disable.
+- et (expandtab) - tab대신 space로 변경.
 - ff=value (fileformat) - 파일 포맷을 변경할 수 있다. 주로 dos (CR+LF), unix (LF), mac (CR) 을 사용한다.
 - fenc=value (fileencoding) - 파일 인코딩을 변경할 수 있다.
   - utf-8, utf8
