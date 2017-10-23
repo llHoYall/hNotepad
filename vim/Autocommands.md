@@ -13,7 +13,7 @@ Autocommand는 특정한 이벤트마다 원하는 동작을 자동으로 수행
 
 형식은 다음과 같다.
 
-> :autocmd [group] {events} {file\_pattern} [nested] {command}
+> :au[tocmd] \[group] {events} {file\_pattern} [nested] {command}
 
 
 
@@ -55,6 +55,8 @@ $~$
 autocmd를 적용할 이벤트를 나타낸다.
 
 - BufNewFile
+- BufRead
+- BufWrite
 - BufReadPost
 - Filetype
 
@@ -133,7 +135,15 @@ vim script에서는 \기호로 긴 명령어를 분리할 수 있다.
 
 command-line에서는 안된다.
 
-$~$
+
+
+스왑 파일이 존재하는 경우 읽기 전용으로 여는 설정은 다음의 예와 같다.
+
+```vim
+:au	SwapExists	*	let v:swapchoice = 'o'
+```
+
+&nbsp;
 
 ### Deleting
 
