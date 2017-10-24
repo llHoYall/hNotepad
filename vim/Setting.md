@@ -62,6 +62,9 @@ Syntax 파일은 **~/.vim/syntax** 폴더 안에 ***name*.vim** 파일로 저장
 
 ## My Options
 
+- **se enc=utf-8**
+  set encoding=utf-8
+  vim 내부의 문자 인코딩을 설정한다.
 - **se fenc=utf-8**
   set fileencoding=utf-8
   현재 버퍼의 문자 인코딩을 설정한다.
@@ -72,38 +75,31 @@ Syntax 파일은 **~/.vim/syntax** 폴더 안에 ***name*.vim** 파일로 저장
   - cp949 : 유닉스, 윈도우즈 모두 사용 가능
   - japan : 유닉스에서는 euc-jp, 윈도우즈에서는 cp932로 자동 변환.
   - latin1, ansi : ascii 형식
-
 - **se fencs=ucs-bom,utf-8,korea**
   set fileencodings=ucs-bom,utf-8,korea
   파일의 편집을 시작할 때 고려되는 문자 인코딩 목록을 설정한다.
   ucs-bom (universal-character-set byte-order-mark) : 유니코드의 인코딩 타입을 문서 서두에 남겨서 자동으로 인코딩을 판단할 수 있도록 하기 위한 정보.
-
 - **se ff=unix**
   set fileformat=unix
   현재 버퍼의 \<EOL> 설정을 한다.
   - dos : \<CR>\<NL>
   - unix : \<NL>
   - mac : \<CR>
-
 - **se nocp**
   set nocompatible
   vi와 호환하지 않음.
-
 - **filet on**
   filetype on
   file type을 자동으로 인식하게 한다.
   $VIMRUNTIME/filetype.vim 파일에 정의되어 있다.
-
 - **syntax enable**
   현재 color scheme으로 문법 체크 기능을 사용한다.
   syntax on - vim의 기본 설정으로 문법 체크 기능을 사용한다.
   syntax clear - 문법 체크 기능을 사용하지 않는다. 현재 창에만 적용된다.
   syntax off - 문법 체크 기능을 사용하지 않는다. 기능을 완전히 중지하고, 모든 버퍼에서 삭제한다.
-
 - **colo {*scheme*}**
   colorscheme {*scheme*}
   해당 색상 테마를 사용한다. 문법 체크 기능과 연동된다.
-
 - **se ai**
   set autoindent
   자동 들여쓰기. 이전 라인의 들여쓰기 만큼 들여쓴다.
