@@ -23,6 +23,7 @@ tags: vim
   -Exclude {*file*}
 - **Rename-Item** {*current*} {*new*} : rni, ren
 - **Set-Alias** {*name*} {*path*}
+- **Set-Location** {*path*} : sl, cd, pwd, chdir
 - **Test-Path** {*path*}
   return True|False
 
