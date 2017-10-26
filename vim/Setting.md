@@ -17,6 +17,7 @@ tags: vim
 - :se[t] \[no]*option* - 해당 옵션을 enable/disable 한다.
 - :se[t] *option*! - 해당 옵션의 상태를 toggle 한다.
 - :se[t] *option*=*value* - 해당 옵션에 값을 지정한다.
+- :setl[ocal] ... - :set과 비슷하지만, 현재 버퍼 혹은 현재 창에만 적용된다.
 
 옵션 사이에 공백으로 구분하여 여러 옵션을 한 번에 설정할 수도 있다.
 
@@ -70,10 +71,6 @@ Syntax 파일은 **~/.vim/syntax** 폴더 안에 ***name*.vim** 파일로 저장
 - **se nocp**
   set nocompatible
   vi와 호환하지 않음.
-- **filet on**
-  filetype on
-  file type을 자동으로 인식하게 한다.
-  $VIMRUNTIME/filetype.vim 파일에 정의되어 있다.
 - **syntax enable**
   현재 color scheme으로 문법 체크 기능을 사용한다.
   - syntax on : vim의 기본 설정으로 문법 체크 기능을 사용한다.
@@ -85,6 +82,11 @@ Syntax 파일은 **~/.vim/syntax** 폴더 안에 ***name*.vim** 파일로 저장
 - **colo {*scheme*}**
   colorscheme {*scheme*}
   해당 색상 테마를 사용한다. 문법 체크 기능과 연동된다.
+- **filet plugin indent on**
+  filetype plugin indent on
+  - filet on : file type을 자동으로 인식하게 한다. $VIMRUNTIME/filetype.vim 파일에 정의되어 있다.
+  - filet plugin on : file type을 인식해 plugin 파일을 loading하게 한다.
+  - filet indent on : file type을 인식해 indent 파일을 loading하게 한다.
 - **se ai**
   set autoindent
   자동 들여쓰기. 이전 라인의 들여쓰기 만큼 들여쓴다.
@@ -106,6 +108,10 @@ Syntax 파일은 **~/.vim/syntax** 폴더 안에 ***name*.vim** 파일로 저장
 - **se noet**
   set noexpandtab
   tab대신 space로 변경하지 않는다.
+- **se fdm=marker**
+  set foldmethod=marker
+  Fold 방법을 설정한다.
+  - marker : {{{, }}} 기호를 주석과 함께 사용하여 마킹할 수 있다.
 - **se hls**
   set hlsearch
   검색 시 하이라이팅을 해준다.
@@ -115,6 +121,12 @@ Syntax 파일은 **~/.vim/syntax** 폴더 안에 ***name*.vim** 파일로 저장
 - **se is**
   set incsearch
   검색 패턴입력을 할때마다 해당 패턴을 찾아 이동시켜준다.
+- **se ls=2**
+  set laststatus=2
+  상태창 표시 여부를 설정한다.
+  - 0 : 표시하지 않는다.
+  - 1 : 2개 이상의 창이 열려있을 때만 표시한다.
+  - 2 : 항상 표시한다.
 - **se nu**
   set number
   라인 번호 표시.
