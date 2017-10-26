@@ -5,7 +5,7 @@ category: vim
 tags: vim
 ---
 
-$~$
+&nbsp;
 
 # [VimCasts] #1 Show Invisibles
 
@@ -19,8 +19,8 @@ $~$
 
  ~~~vim
 " .vimrc
-nmap <leader>| :set list!<CR>
-set listchars=tab:▸\, eol:¬
+nmap	<leader>| :set list!<CR>
+set	listchars=tab:▸\, eol:¬
  ~~~
 
 - \<leader>는 backslash키를 의미한다.
@@ -33,13 +33,13 @@ set listchars=tab:▸\, eol:¬
 
 위 문자를 원하는 색상으로 변경할 수도 있다. 다음의 코드를 colorscheme 파일에 추가한다.
 
-~~~vim
+```vim
 " colorscheme file
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
-~~~
+```
 
-$~$
+&nbsp;
 
 ## Reference
 
