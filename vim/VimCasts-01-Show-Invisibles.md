@@ -20,7 +20,7 @@ tags: vim
  ~~~vim
 " .vimrc
 nmap	<leader>| :set list!<CR>
-set	listchars=tab:▸\, eol:¬
+set	listchars=tab:▸\ ,eol:¬
  ~~~
 
 - \<leader>는 backslash키를 의미한다.
@@ -44,8 +44,9 @@ highlight SpecialKey guifg=#4a4a59
 ## Reference
 
 - :help 'list'
-- :help listchars
+- :help 'listchars'
 - :help hl-NonText
 - :help hl-SpecialKey
 - :help i\_CTRL-V\_digit
+
 
