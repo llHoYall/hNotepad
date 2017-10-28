@@ -15,22 +15,20 @@ tags: vim
   -Recurse
 
 - **Get-ChildItem** {*path*} : gci, ls, dir
-
   -Exclude
-
   -Recurse
-
   -Force
-
   -Directory
-
   -File
-
   -Hidden
-
   -ReadOnly
-
   -System
+
+- **Invoke-WebRequest** : iwr, wget, curl
+  - -Uri {*uri*}
+  - -OutFile {*string*}
+
+- **Invoke-Expression** {*script file*} : iex
 
 - **New-Item** {path} : ni
   -Type {directory|file}
