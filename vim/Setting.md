@@ -155,6 +155,10 @@ Syntax 파일은 **~/.vim/syntax** 폴더 안에 ***name*.vim** 파일로 저장
   set number
   라인 번호 표시.
 
+- **se rtp+={*path*}**
+
+  set runtimepath+={*path*}
+
 - **se ru**
   set ruler
   현재 커서 위치를 표시해준다.
