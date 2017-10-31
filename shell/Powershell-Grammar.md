@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Powershell Grammar
-category: vim
-tags: vim
+category: shell
+tags: [shell, powershell]
 ---
 
 &nbsp;
@@ -37,4 +37,8 @@ Else {
   statement
 }
 ```
+
+### Exit
+
+### Return
 
