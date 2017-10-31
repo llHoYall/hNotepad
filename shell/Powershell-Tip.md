@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Powershell Tip
-category: vim
-tags: vim
+category: shell
+tags: [shell, powershell]
 ---
 
 &nbsp;
