@@ -207,6 +207,9 @@ Syntax 파일은 **~/.vim/syntax** 폴더 안에 ***name*.vim** 파일로 저장
   set shiftwidth=2
   블록 단위 간격. 즉 cindent에 영향을 준다.
 
+- **setf {*filetype*}**
+  setfiletype {*filetype*}
+
 - **se ts=2**
   set tabstop=2
   tab을 눌렀을 때의 간격.
