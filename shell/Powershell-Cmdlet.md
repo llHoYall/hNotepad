@@ -10,9 +10,13 @@ tags: [shell, powershell]
 # Powershell Cmdlet
 
 - **Get-Help**
+
 - **Copy-Item** {*from*} {*to*} : cpi, cp, copy
+
   -Recurse
+
 - **Get-ChildItem** {*path*} : gci, ls, dir
+
   -Exclude
   -Recurse
   -Force
@@ -21,28 +25,50 @@ tags: [shell, powershell]
   -Hidden
   -ReadOnly
   -System
+
 - **Get-Module**
+
   -Name {*string*}
+
+- **Import-Module**
+
+  -Name {*string*}
+  -Force
+  -Global
+
 - **Install-Module**
+
   -Name {*string*}
   -Force
   -Scope {AllUsers | CurrentUser}
+
 - **Invoke-WebRequest** : iwr, wget, curl
+
   -Uri {*uri*}
   -OutFile {*string*}
+
 - **Invoke-Expression** {*script file*} : iex
+
 - **New-Item** {path} : ni
+
   -Type {directory|file}
   -Force
   -Value "*data*"
+
 - **Remove-Item** {*path*} : ri, rd, erase, rm, rmdir, del
+
   -Recurse
   -Force
   -Include {*file*}
   -Exclude {*file*}
+
 - **Rename-Item** {*current*} {*new*} : rni, ren
+
 - **Set-Alias** {*name*} {*path*}
+
 - **Set-Location** {*path*} : sl, cd, pwd, chdir
+
 - **Test-Path** {*path*}
+
   return True|False
 
