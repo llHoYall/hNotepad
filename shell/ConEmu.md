@@ -38,7 +38,7 @@ Windows에서 사용할 수 있는 Console Emulator이다.
 - `<WIN> + n` : 새로운 콘솔 다이얼로그를 보여준다.
 - `<WIN> + x` : 새로운 cmd 콘솔을 연다.
 - `<WIN> + w` : 새로운 powershell 콘솔을 연다.
-- `<WIN> + s` : 새로운 powershell 콘솔을 관리자 모드로 연다.
+- `<WIN> + s` : 새로운 powershell 콘솔을 현재 탭의 root process를 복제하여 연다. 즉 관리자 모드면 관리자 모드로, 일반 모드면 일반 모드로 연다.
 - `<WIN> + <DELETE>` : 현재 탭 혹은 창을 닫는다.
 - `<CTRL> + <TAB>`, `<WIN> + q` : 다음 탭으로 이동한다.
 - `<CTRL> + <SHIFT> + <TAB>`, `<WIN> + <SHIFT> + q` : 이전 탭으로 이동한다.
