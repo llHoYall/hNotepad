@@ -109,3 +109,24 @@ TypeError: 'str' object does not support item assignment
 6.25
 ```
 
+&nbsp;
+
+### Unicode
+
+현재 시스템의 인코딩은 다음 함수로 알 수 있다.
+
+```python
+import sys
+sys.stdin.encoding
+sys.stdout.encoding
+```
+
+어떤 문자의 유니코드 값을 알고 싶거나 유니코드의 값을 문자로 변환할 때는 다음 함수를 사용한다.
+
+```python
+>>> ord('s')
+115
+>>> chr(112)
+'p'
+```
+
