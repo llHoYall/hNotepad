@@ -9,7 +9,7 @@ tags: python
 
 # Collection - List
 
- 리스트는 값의 나열이며, 여러 종류의 값을 답을 수 있다.
+리스트는 값의 나열이며, 여러 종류의 값을 담을 수 있다.
 
 인덱싱이 가능하며 슬라이싱도 가능하다.
 
@@ -22,6 +22,9 @@ tags: python
 
 ```python
 color = ['red', 'green', 'blue']
+listA = list([1, 2, 3])
+listB = list({4, 5, 6})
+listC = list((7, 8, 9))
 ```
 
 &nbsp;
@@ -54,6 +57,15 @@ colors.index('red', 1)
 colors.index('red', 1, 5)
 # 리스트에서 해당 값의 개수를 반환한다.
 colors.count('red')
+```
+
+&nbsp;
+
+### Check
+
+```python
+>>> 1 in listA
+True
 ```
 
 &nbsp;
