@@ -12,11 +12,21 @@ tags: python
 ### Installation 
 
 > https://www.python.org/downloads/
->
+
+##### on Windows
+
+관리자 권한 필요.
+
 > $ choco install python -y
 >
+> $ refreshenv
+
+##### on Mac
+
 > $ brew install python -y
->
+
+##### on Linux
+
 > $ apt-get install python -y
 
 ### 종류
