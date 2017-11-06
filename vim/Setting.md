@@ -210,6 +210,8 @@ Syntax 파일은 **~/.vim/syntax** 폴더 안에 ***name*.vim** 파일로 저장
 - **setf {*filetype*}**
   setfiletype {*filetype*}
 
+- **se tags+=./tags**
+
 - **se ts=2**
   set tabstop=2
   tab을 눌렀을 때의 간격.
