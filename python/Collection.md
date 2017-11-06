@@ -24,3 +24,8 @@ setB = set((7, 8, 9))
 
 각 컬렉션끼리는 혼용해서 사용할 수 있다.
 
+```python
+{'keyA': 35.1, 'keyB': [1, 2, 3], 'keyC': {'abc': 123, 'def': 456}}
+[1, 2, 3, ('red', 'green'), {'banana': 'yellow'}]
+```
+
