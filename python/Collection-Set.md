@@ -13,16 +13,15 @@ tags: python
 
 - 순서가 없다.
 - 중복이 불가능하다.
+- 변경이 불가능하다.
 
 &nbsp;
 
 ### Create
 
 ```python
+setA = set({4, 5, 6})
 numbers = {1, 2, 3}
-setA = set([1, 2, 3])
-setB = set({4, 5, 6})
-setC = set((7, 8, 9))
 ```
 
 &nbsp;
