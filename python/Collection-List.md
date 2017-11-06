@@ -15,16 +15,15 @@ tags: python
 
 - 순서가 존재한다.
 - 중복이 가능하다.
+- 변경이 가능하다.
 
 &nbsp;
 
 ### Create
 
 ```python
-color = ['red', 'green', 'blue']
 listA = list([1, 2, 3])
-listB = list({4, 5, 6})
-listC = list((7, 8, 9))
+color = ['red', 'green', 'blue']
 ```
 
 &nbsp;
