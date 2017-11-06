@@ -13,17 +13,16 @@ tags: python
 
 - 순서가 존재한다.
 - 중복이 가능하다.
+- 변경이 불가능하다.
 
 &nbsp;
 
 ### Create
 
 ```python
-numbers = (1, 2, 3)
+tupleA = tuple((7, 8, 9))
+tupleB = (1, 2, 3)
 a, b = 1, 2		# (a, b) = (1, 2)
-tupleA = tuple([1, 2, 3])
-tupleB = tuple({4, 5, 6})
-tupleC = tuple((7, 8, 9))
 ```
 
 &nbsp;
