@@ -41,14 +41,22 @@ tags: vim
 그래서 다음과 같은 함수를 만들어 사용한다.
 
 ```vim
-function! Preserve(command)
-	let _s = @/
+fu! Preserve(command)
+	" Save last search
+	let _s=@/
+	" Save position
 	let l = line(".")
 	let c = col(".")
-	execute aLcommand
-	let @/ = _s
+	
+	execute a:command
+	
+	" Restore last search
+	let @/=_s
+	" Restore position
 	call cursor(l, c)
-endfunction
+endf
+
+au BufWritePre * call Preserve("%s/\\s\\+$//e")
 
 nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 nmap _= :call Preserve("normal gg=G")<CR>
