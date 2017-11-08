@@ -15,3 +15,4 @@ tags: [unix, mac, terminal]
 - \<CTRL-s> : 스크롤 잠금
 - \<CTRL-z> : 현재 작업을 백그라운드로 보냄
 
+
