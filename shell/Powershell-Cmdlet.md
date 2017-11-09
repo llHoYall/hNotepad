@@ -49,11 +49,17 @@ tags: [shell, powershell]
 
 - **Invoke-Expression** {*script file*} : iex
 
-- **New-Item** {path} : ni
+- **New-Item** {*path*} : ni
 
   -Type {directory|file}
   -Force
   -Value "*data*"
+
+- **Pop-Location** : popd
+
+- **Push-Location** : pushd
+
+  -Path {*path*}
 
 - **Remove-Item** {*path*} : ri, rd, erase, rm, rmdir, del
 
