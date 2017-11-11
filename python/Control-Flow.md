@@ -1,15 +1,17 @@
 ---
 layout: post
-title: Flow Control
+title: Control Flow
 category: python
 tags: python
 ---
 
 &nbsp;
 
-# Flow Control
+# Control Flow
 
-### if
+### 조건문
+
+##### if
 
 ```python
 if condition:
@@ -43,6 +45,43 @@ else:
 
 &nbsp;
 
-### pass
+### 반복문
+
+##### for
+
+```python
+for item in sequence:
+    statements
+```
+
+사용 가능한 시퀀스형 자료는 <문자열, 튜플, 리스트, 딕셔너리, iter()로 생성되는 이터레이터 객체> 등이다.
+
+##### While
+
+```python
+while condition:
+    statements
+```
+
+&nbsp;
+
+### 기타 제어문
+
+##### break
+
+break는 반복문을 종료한다.
+
+##### Continue
+
+continue는 이후 내용을 건너뛰고 다음 반복문을 수행한다.
+
+##### else
+
+else는 반복문과 함께 쓰일 수 있다.
+
+break로 종료되지 않고, 정상적으로 반복문이 종료될 경우에만 수행된다.
+
+##### pass
 
 pass는 아무동작도 수행하지 않음을 명시적으로 나타낼 때 사용한다.
+
