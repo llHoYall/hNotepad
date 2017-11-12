@@ -11,6 +11,7 @@ tags: python
 
 - **dir([*object*])**
   인자 없이 사용하면 현재 local scope에 있는 이름의 목록을 보여준다.
+
   인자와 함께 사용하면 해당 객체에 있는 유효한 attributes 목록을 보여준다.
 
 - **enumerate(*iterable*, start=0)**
@@ -29,6 +30,11 @@ tags: python
 
 - **id(*object*)**
   객체의 identity를 보여준다.
+
+- **isinstance(*object*, *classinfo*)**
+  object가 classinfo의 인스턴스이면 True, 아니면 False를 반환한다.
+
+  classinfo에는 튜플 형태로 여러 개를 넣을 수 있다.
 
 - **iter(*object*[, *sentinel*])**
   이터레이터 객체를 반환한다.
