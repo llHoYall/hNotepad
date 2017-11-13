@@ -28,3 +28,38 @@ class name:
 생성자, 소멸자는 각각 `__init__()`, `__del__()` 함수로 정의되어 있다. 변경을 원하면 재정의하면 된다.
 
 생성자는 인스턴스가 생성될 때 호출되며, 소멸자는 인스턴스의 레퍼런스 카운터가 0이 될 때 호출된다.
+
+##### Static Method & Class Method
+
+인스턴스 없이 클래스를 통해 직접 호출할 수 있는 메서드들이다. 정적 메서드는 인자가 필요없고, 클래스 메서드는 암묵적으로 첫 인자로 클래스 객체가 전달된다.
+
+다음의 문법으로 사용된다.
+
+>Called by MethodName = **staticmethod**(MethodName in Class)
+>
+>Called by MethodName = **classmethod**(MethodName in Class)
+
+실제 사용 예는 다음과 같다.
+
+```python
+class Counter:
+    counter = 0
+    
+    def __init__(self):
+        Counter.counter += 1
+        
+    def staticPrintCounter():
+        print("Counter: ", Counter.counter)
+    SPrintCounter = staticmethod(staticPrintCounter)
+        
+    def classPrintCounter(cls):
+        print("Counter: ", cls.counter)
+	CPrintCounter = classmethod(classPrintCounter)
+    
+a, b, c = Counter(), Counter(), Counter()
+Counter.SPrintCounter()
+b.SPrintCounter()
+Counter.CPrintCounter()
+b.CPrintCounter()
+```
+
