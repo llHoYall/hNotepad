@@ -36,6 +36,11 @@ tags: python
 
   classinfo에는 튜플 형태로 여러 개를 넣을 수 있다.
 
+- **issubclass(*class*, *classinfo*)**
+  class가 classinfo의 서브 클래스이면 True를 반환하고 그렇지 않다면 False를 반환한다.
+
+  클래스는 자신의 서브 클래스이다.
+
 - **iter(*object*[, *sentinel*])**
   이터레이터 객체를 반환한다.
 
@@ -55,4 +60,3 @@ tags: python
   인자로 넣은 iterable 객체의 아이템들을 하나씩 튜플로 묶어 이터레이션 객체를 반환한다. 결합을 하는 인자의 아이템의 개수가 같지 않다면 적은 쪽을 기준으로 결합한다. 결과를 튜플, 리스트, 딕셔너리 등으로 사용하려면, tuple(), list(), dict() 함수를 사용해야한다.
 
   iterable 객체 앞에 *를 붙이면, 결합된 객체를 분리한다.
-
