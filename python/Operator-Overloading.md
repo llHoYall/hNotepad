@@ -97,7 +97,84 @@ tags: python
 - **\__ior__(*self*, *other*)** : |=
   Ex : A |= B
 
-- **\__ixor__(self, other)** : ^=
+- **\__ixor__(*self*, *other*)** : ^=
   Ex : A ^= B
 
 피연산자의 위치가 바뀌면 호출되는 메서드도 바뀐다.
+
+- **\__radd__(*self*, *other*)** : +
+  Ex : B + A
+
+- **\__rsub__(*self*, *other*)** : -
+  Ex : B - A
+
+- **\__rmul__(*self*, *other*)** : *
+  Ex : B * A
+
+- **\__rtruediv__(*self*, *other*)** : /
+  Ex : B / A
+
+- **\__rfloordiv__(*self*, *other*)** : //
+  Ex : B // A
+
+- **\__rmod__(*self*, *other*)** : %
+  Ex : B % A
+
+- **\__rdivmod__(*self*, *other*)** : divmod()
+  Ex : divmod(B, A)
+
+- **\__rpow__(*self*, *other*)** : **
+  Ex : B ** A
+
+- **\__rlshift__(*self*, *other*)** : <<
+  Ex : B << A
+
+- **\__rrshift__(*self*, *other*)** : >>
+  Ex : B >> A
+
+- **\__rand__(*self*)** : &
+  Ex : B & A
+
+- **\__ror__(*self*)** : |
+  Ex : B | A
+
+- **\__rxor__(*self*)** : ^
+  Ex : B ^ A
+
+비교 연산자에 해당하는 메서드는 다음과 같다.
+
+- **\__lt__(*self*, *other*)** : <
+  Ex : A < B, B > A
+
+- **\__le__(*self*, *other*)** : <=
+  Ex : A <= B, B >= A
+
+- **\__eq__(*self*, *other*)** : ==
+  Ex : A == B, B == A
+
+- **\__ne__(*self*, *other*)** : !=
+  Ex : A != B, B != A
+
+- **\__ge__(*self*, *other*)** : >=
+  Ex : A >= B, B <= A
+
+- **\__gt__(*self*, *other*)** : >
+  Ex : A > B, B < A
+
+시퀀스 객체를 위한 연산자 다중 메서드는 다음과 같다.
+
+- **\__len__(*self*)** : len()
+  Ex : len(A)
+
+- **\__contain__(*self*, *item*)** : in
+  Ex : item in A
+
+- **\__getitem__(*self*, *key*)** : A[key]
+  Ex : A[key], for 문
+
+- **\__setitem__(*self*, *key*, *value*)** : A[key] = value
+  Ex : A[key] = value
+
+- **\__delitem__(*self*, *key*)** : del A[key]
+  Ex : del A[key]
+
