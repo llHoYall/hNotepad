@@ -70,7 +70,7 @@ b.CPrintCounter()
 상속은 자식 클래스를 선언할 때, 괄호 안에 부모 클래스를 넣어준다. 다중 상속을 할 경우 ','로 구분을 한다.
 
 ```python
-class ChildClass(ParentClass):
+class SubClass(SuperClass):
     pass
 ```
 
@@ -79,9 +79,64 @@ class ChildClass(ParentClass):
 파이썬에서는 부모 클래스의 생성자를 명시적으로 호출해야한다. 이때 인스턴스를 나타내는 첫 인자인 'self'를 함쎄 전달해야한다. (unbound method)
 
 ```python
-class ChildClass(ParentClass):
+class SuperClass(SubClass):
     def __init__(self):
         ParentClass.__init__(self)
+```
+
+상속 구조에서 이름을 찾는 순서는 `__mro__`에 튜플로 정의되어 있다. (Method Resolution Order)
+
+다이아몬드 형태의 다중 상속 구조에서는 다음과 같이 부모의 부모가 중복 호출되는 문제 등이 존재한다.
+
+```python
+class SuperSuperClass:
+    def __init__(self):
+        print("SuperSuper Init")
+        
+class SuperClassA(SuperSuperClass):      
+    def __init__(self):
+        SuperSuperClass.__init__(self)
+        print("SuperA Init")
+        
+class SuperClassB(SuperSuperClass):      
+    def __init__(self):
+        SuperSuperClass.__init__(self)
+        print("SuperB Init")        
+        
+class SubClass(SuperClassA, SuperClassB):
+    def __init__(self):
+        SuperClassA.__init__(self)
+        SuperClassB.__init__(self)
+        print("Sub Init")
+```
+
+파이썬에서는 내장 함수인 `super()`를 사용하면 이를 해결할 수 있다.
+
+```python
+class SuperSuperClass:
+    def __init__(self):
+        print("SuperSuper Init")
+        
+class SuperClassA(SuperSuperClass):      
+    def __init__(self):
+        super().__init__()
+        print("SuperA Init")
+        
+class SuperClassB(SuperSuperClass):      
+    def __init__(self):
+        super.__init__()
+        print("SuperB Init")        
+        
+class SubClass(SuperClassA, SuperClassB):
+    def __init__(self):
+        super.__init__()
+        print("Sub Init")
+```
+
+특정 클래스를 지정하여 사용할 수도 있다.
+
+```python
+super(SubClass, self).__init__()
 ```
 
 ##### Method Overriding
