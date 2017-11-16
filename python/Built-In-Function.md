@@ -56,6 +56,11 @@ tags: python
 - **sum(*iterable*[, *start*])**
   iterable item의 start부터 왼쪽에서 오른쪽으로 합계를 구한다.
 
+- **super([*type*[, *object-or-type*]])**
+  type의 parent나 sibling class의 객체를 반환한다.
+
+  두 번째 인자가 없을경우, unbound로 사용된다.
+
 - **zip([\*]*iterables*)**
   인자로 넣은 iterable 객체의 아이템들을 하나씩 튜플로 묶어 이터레이션 객체를 반환한다. 결합을 하는 인자의 아이템의 개수가 같지 않다면 적은 쪽을 기준으로 결합한다. 결과를 튜플, 리스트, 딕셔너리 등으로 사용하려면, tuple(), list(), dict() 함수를 사용해야한다.
 
