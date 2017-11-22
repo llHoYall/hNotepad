@@ -45,9 +45,7 @@ Test
 \tTAB\nNEWLINE
 ```
 
-&nbsp;
-
-### Indexing
+#### Indexing
 
 문자열은 리스트처럼 인식되어 인덱싱을 할 수 있다. 리스트는 아니다.
 
@@ -61,9 +59,7 @@ Test
 TypeError: 'str' object does not support item assignment
 ```
 
-&nbsp;
-
-### Slicing
+#### Slicing
 
 문자열의 특정 부분을 취할 수 있다. [start : end : step]와 같은 형태로 사용한다.
 
@@ -92,9 +88,7 @@ TypeError: 'str' object does not support item assignment
 'Pto'
 ```
 
-&nbsp;
-
-### Type Casting
+#### Type Casting
 
 숫자를 문자열로 변환하거나 문자열을 숫자로 변환하려면 자료형 클래스의 생성자를 사용한다.
 
@@ -109,9 +103,7 @@ TypeError: 'str' object does not support item assignment
 6.25
 ```
 
-&nbsp;
-
-### Unicode
+#### Unicode
 
 현재 시스템의 인코딩은 다음 함수로 알 수 있다.
 
@@ -128,5 +120,24 @@ sys.stdout.encoding
 115
 >>> chr(112)
 'p'
+```
+
+#### Alignment
+
+```python
+# 우측 정렬
+>>> 'right'.rjust(10)
+'     right'
+>>> 'right'.rjust(3)
+'right'
+# 좌측 정렬
+>>> 'left'.ljust(10)
+'left      '
+# 가운데 정렬
+>>> 'center'.center(10)
+'  center  '
+# 우측 정렬 및 0으로 공백 채우기
+>>> 'right'.zfill(10)
+'00000right'
 ```
 
