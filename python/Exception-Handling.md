@@ -54,6 +54,31 @@ finally:
 
 `try` 구문은 중첩 가능하다.
 
+`raise` 구문을 사용하여 강제로 예외를 발생시킬 수 있다.
+
+```python
+# 원하는 예외 발생
+raise [Exception]
+# 원하는 예외 발생 및 관련 데이터 전달
+raise [Exception(data)]
+# 발생된 예외를 상위로 전달
+raise
+```
+
+사용자가 원하는 예외를 직접 정의할 수도 있다. 이때, 반드시 내장 예외인 Exception 클래스나 하위 클래스를 상속받아 구현해야만 한다. 사용자 정의 예외는 `raise` 구문으로 발생시킬 수 있다.
+
+`assert` 구문으로도 예외를 발생시킬 수 있다.
+
+```python
+assert <조건식>, [관련 데이터]
+
+def func(x):
+    assert type(x) == int, "Input value must be integer"
+func("a")	# 예외 발생 (AssertionError)
+```
+
+관련 데이터 부분은 예외가 발생할 시 AssertionError의 인자로 전달되며, 생략 가능하다. 내부 변수인 `__debug__`가 True인 경우에만 `assert` 구문이 활성화된다. 파이썬을 실행할 때, 최적화 옵션 '-O'을 설정하면 `__debug__` 값은 False가 된다.
+
 ##### Exception Hierarchy
 
 내장 예외는 다음과 같은 클래스 계층 구조를 갖는다.
@@ -63,7 +88,7 @@ finally:
   - KeyboardInterrupt : 사용자가 인터럽트 키를 누른 경우에 발생.
   - GeneratorExit : 제너레이터의 close() 메서드가 호출될 때 발생
   - Exception : 모든 내장 예외의 기본이 되는 클래스. 사용자 정의 예외를 구현할 경우 이 클래스를 상속받아야 한다.
-    - StopIteration : next()나 이터레이터의 \__next__()에 대하여 더는 반환할 값이 없는 경우 발생.
+    - StopIteration : next()나 이터레이터의 \_\_next\_\_()에 대하여 더는 반환할 값이 없는 경우 발생.
     - ArithmeticError : 수치 연산 에러의 기본.
       - FloatingPointError : 부동 소수점 연산이 실패한 경우 발생. pyconfig.h에 WANT_SIGFPE_HANDLER가 정의되거나, --with-fpectl 옵션이 설정된 경우에만 발생.
       - OverflowError : 산술 연산 결과가 표현할 수 있는 범위를 벗어난 경우 발생.
