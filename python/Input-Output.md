@@ -121,3 +121,12 @@ formatter로 실수도 표시할 수 있다.
 1.333
 ```
 
+### Input
+
+`input()` 함수를 사용하여 사용자 입력을 받을 수 있다. 인자로 문자열을 넣으면 해당 문자열을 화면에 출력한다.
+
+```python
+a = input()
+b = input("Please insert character: ")
+```
+
