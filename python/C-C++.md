@@ -184,6 +184,151 @@ Py_XDECREF(item);
 
 &nbsp;
 
+### User Datatype
+
+```C
+#include <python.h>
+#include "structmember.h"		// PyMethodDef 구조체를 사용하기 위해 포함.
+
+typedef struct {
+  // 매크로 이므로 절대 ';'을 붙여서는 안된다.
+  PyObject_HEAD		// 레퍼런스 카운트, 타입 객체 포인터를 포함시켜준다.
+  // 멤버를 추가한다.
+  PyObject* varObj;
+  int		varInt;
+} user_UserObject;
+
+static PyObject* User_new(PyTypeObject* type, PyObject* args, PyObject* keywords) {
+  user_UserObject* self;
+  self = (user_UserObject*)type->tp_alloc(type, 0);
+  if (self != NULL) {
+    self->varObj = PyUnicode_FromString("");
+    if (self->varObj == NULL) {
+      Py_DECREF(self);
+      return NULL;
+    }
+    self->varInt = 0;
+  }
+  return (PyObject*)self;
+}
+
+static void User_init(user_UserObject* self, PyObject* args, PyObject* keywords) {
+  PyObject* varObj = NULL;
+  PyObject* temp = NULL;
+  static char* keywordList[] = {"varObj", "varInt", NULL};
+  if (!PyArg_ParseTupleAndKeywords(args, keywords, "|Si", keywordList, &varObj, &self->varInt))
+    return -1;
+  if (varObj) {
+    temp = self->varObj;
+    Py_INCREF(varObj);
+    self->varObj = varObj;
+    Py_DECREF(temp);
+  }
+  return 0;
+}
+
+static PyMemberDef User_members[] = {
+  {"varObj", T_OBJECT_EX, offsetof(user_UserObject, varObj), 0, "varObj of user"},
+  {"varInt", T_INT, offsetof(user_UserObject,varInt), 0, "varInt of user"},
+  {NULL}
+};
+
+static PyObject* User_varObj(user_UserObject* self) {
+  static PyObject* fmt = NULL;
+  PyObject* temp;
+  PyObject* result;
+  if (fmt == NULL) {
+    fmt = PyUnicode_FromString("The user varObj is %s");
+    if (fmt == NULL)
+      return NULL;
+  }
+  if (self->varObj == NULL) {
+    PyErr_SetString(PyExc_AttributeError, "varObj");
+    return NULL;
+  }
+  
+  temp = Py_BuildValue("S", self->varObj);
+  if (temp == NULL)
+    return NULL;
+  result = PyUnicode_Format(fmt, temp);
+  Py_DECREF(temp);
+  
+  return result;
+}
+
+static PyObject* User_func(user_UserObject* self) {
+  int user = 0;
+  if (self->varInt < 0) {
+    PyErr_SetString(PyExc_AttributeError, "varInt");
+    return NULL;
+  }
+  user = (int)((self->varInt) * 2);
+    
+  return Py_BuildValue("i", user);
+}
+
+static PyMethodDef User_methods[] = {
+  {"varObj", (PyCFunction)User_varObj, METH_NOARGS, "Return the varObj of user"},
+  {"func", (PyCFunction)User_varFunc, METH_MOARGS, "twice of varInt of user"},
+  {NULL}
+};
+
+static PyObject* User_add(user_UserObject* self, user_UserObject* target) {
+  self->varInt += target->varInt;
+  return Py_BuildValue("i", self->varInt);
+}
+
+static PyTypeObject user_UserType = {
+  PyObject_HEAD_INIT(NULL),
+  "user.User",				// tp_name
+  sizeof(user_UserObject),	// tp_basicsize
+  0,						// tp_itemsize
+  0,						// tp_dealloc
+  0,						// tp_print
+  0,						// tp_getattr
+  0,						// tp_setattr
+  0,						// tp_reserved
+  0,						// tp_repr
+  0,						// tp_as_number
+  0,						// tp_as_sequence
+  0,						// tp_as_mapping
+  0,						// tp_hash
+  0,						// tp_call
+  0,						// tp_str
+  0,						// tp_getattro
+  0,						// tp_setattro
+  0,						// tp_as_buffer
+  Py_TPFLAGS_DEFAULT,		// tp_flags
+  "User objects",			// tp_doc
+};
+
+static PyModuleDef usermodule = {
+  PyModuleDef_HEAD_INIT,
+  "user",
+  "Example module that creates an extension type.",
+  -1,
+  NULL, NULL, NULL, NULL, NULL
+};
+
+PyMODINIT_FUNC PyInit_user(void) {
+  PyObject* m;
+  
+  user_UserType.tp_new = PyType_GenericNew;
+  if (PyType_Ready(&user_UserType) < 0)
+    return NULL;
+  
+  m = PyModule_Create(&usermodule);
+  if (m == NULL)
+    return NULL;
+  
+  PyINCREF(&user_UserType);
+  PyModule_AddObject(m, "User", (PyObject*)&user_UserType);
+  return m;
+}
+```
+
+&nbsp;
+
 ### Reference
 
 ##### PyArg_ParseTuple
