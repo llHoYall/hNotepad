@@ -7,7 +7,7 @@ tags: vim
 
 &nbsp;
 
-# [VimCasts] #6 Working with Bufferes
+# [VimCasts] #6 Working with Buffers
 
 버퍼 사용법이다.
 
