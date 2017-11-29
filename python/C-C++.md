@@ -212,7 +212,12 @@ static PyObject* User_new(PyTypeObject* type, PyObject* args, PyObject* keywords
   return (PyObject*)self;
 }
 
-static void User_init(user_UserObject* self, PyObject* args, PyObject* keywords) {
+static void User_dealloc(user_UserObject* self) {
+  Py_XDECREF(self->varObj);
+  Py_TYPE(self)->tp_free((PyObject*)self);
+}
+
+static int User_init(user_UserObject* self, PyObject* args, PyObject* keywords) {
   PyObject* varObj = NULL;
   PyObject* temp = NULL;
   static char* keywordList[] = {"varObj", "varInt", NULL};
@@ -278,18 +283,30 @@ static PyObject* User_add(user_UserObject* self, user_UserObject* target) {
   return Py_BuildValue("i", self->varInt);
 }
 
+static PyObject* User_multiply(user_UserObject* self, user_UserObject* target) {
+  PyErr_SetString(PyExc_NotImplementedError, " The multiply has been not Implemented");
+  return NULL;
+}
+
+static PyNumberMethods user_number = {
+  (binaryfunc)User_add,			// nb_add
+  (binaryfunc)0,				// nb_subtract
+  (binaryfunc)User_multiply,	// nb_multiply
+  (bunaryfunc)0					// nb_remainder
+};
+
 static PyTypeObject user_UserType = {
   PyObject_HEAD_INIT(NULL),
   "user.User",				// tp_name
   sizeof(user_UserObject),	// tp_basicsize
   0,						// tp_itemsize
-  0,						// tp_dealloc
+  (destructor)User_dealloc,	// tp_dealloc
   0,						// tp_print
   0,						// tp_getattr
   0,						// tp_setattr
   0,						// tp_reserved
   0,						// tp_repr
-  0,						// tp_as_number
+  &user_number,				// tp_as_number
   0,						// tp_as_sequence
   0,						// tp_as_mapping
   0,						// tp_hash
@@ -298,8 +315,24 @@ static PyTypeObject user_UserType = {
   0,						// tp_getattro
   0,						// tp_setattro
   0,						// tp_as_buffer
-  Py_TPFLAGS_DEFAULT,		// tp_flags
+  Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,		// tp_flags
   "User objects",			// tp_doc
+  0,						// tp_traverse
+  0,						// tp_clear
+  0,						// tp_richcompare
+  0,						// tp_weaklistoffset
+  0,						// tp_iter
+  0,						// tp_iternext
+  User_methods,				// tp_methods
+  User_members,				// tp_members
+  0,						// tp_getset
+  0,						// tp_base
+  0,						// tp_dict
+  0,						// tp_descr_get
+  0,						// tp_dictoffset
+  (initproc)User_init,		// tp_init
+  0,						// tp_alloc
+  User_new,					// tp_new
 };
 
 static PyModuleDef usermodule = {
@@ -312,8 +345,7 @@ static PyModuleDef usermodule = {
 
 PyMODINIT_FUNC PyInit_user(void) {
   PyObject* m;
-  
-  user_UserType.tp_new = PyType_GenericNew;
+    
   if (PyType_Ready(&user_UserType) < 0)
     return NULL;
   
@@ -321,7 +353,7 @@ PyMODINIT_FUNC PyInit_user(void) {
   if (m == NULL)
     return NULL;
   
-  PyINCREF(&user_UserType);
+  Py_INCREF(&user_UserType);
   PyModule_AddObject(m, "User", (PyObject*)&user_UserType);
   return m;
 }
