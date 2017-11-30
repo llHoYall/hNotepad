@@ -141,3 +141,97 @@ sys.stdout.encoding
 '00000right'
 ```
 
+#### Methods
+
+- **capitalize()**
+  첫 문자를 대문자로, 나머지 문자를 소문자로 바꿔준다.
+
+- **count(*keyword*[, *start*[, *end*]])**
+  포함된 keyword의 개수를 알려준다. 검색범위를 옵션으로 지정할 수 있다.
+
+- **encode([*encoding*[, *errors*]])**
+  파이썬3에서 str 클래스는 기본적으로 유니코드이다. 이 메서드를 사용하면 인코딩이 있는 바이너리로 변환된다.
+
+  - errors options
+  - **'strict'** : 기본 값. 올바르지 않은 인코딩을 적용하면 UnicodeEncodeError 예외가 발생한다.
+  - **'ignore'** : 에러가 난 부분을 무시한다.
+  - **'replace'** : 에러가 난 부분을 '?' 등의 문자로 대체한다.
+  - **'xmlcharrefreplace'** : 에러가 난 부분을 XML 표현 방식으로 대체한다.
+  - **'backslashreplace'** : 에러가 난 부분을 backslash 표현 방식으로 대체한다.
+
+- **endswith(*postfix*[, *start*[, *end*]])**
+  postfix로 문자열이 끝나면 True, 그렇지 않다면 False를 반환한다. 범위를 지정할 수 있다.
+
+- **expandtabs([*tabsize*])**
+  Tab을 공백으로 치환한다. tabsize 기본 값은 8이다.
+
+- **find(*keyword*[, *start*[, *end*]])**
+  문자열에서 keyword가 나타나는 첫 번째 위치를 반환한다. 찾지 못한다면 -1을 반환한다. 범위를 지정할 수 있다.
+
+- **index(*keyword*[, *start*[, *end*]])**
+  find() 메서드와 유사하지만 찾지 못할 경우 ValueError 예외가 발생한다.
+
+- **isalnum()**
+  문자열이 알파벳과 숫자로만 되어있다면 True, 그렇지 않다면 False를 반환한다.
+
+- **isalpha()**
+  문자열이 알파벳으로만 되어있다면 True, 그렇지 않다면 False를 반환한다.
+
+- **islower()**
+  문자열의 알파벳이 모두 소문자이면 True, 그렇지 않다면 False를 반환한다.
+
+- **isspace()**
+  문자열이 공백 문자(space, tab, newline)로만 되어있다면 True, 그렇지 않다면 False를 반환한다.
+
+- **istitle()**
+  문자열이 Title 스타일(모둔 단어의 첫 글자는 대문자, 나머지는 소문자)로 되어있다면 True, 그렇지 않다면 False를 반환한다.
+
+- **isupper()**
+  문자열의 알파벳이 모두 대문자이면 True, 그렇지 않다면 False를 반환한다.
+
+- **isdecimal()**, **isdigit()**
+  문자열이 10진수로만 되어있다면 True, 그렇지 않다면 False를 반환한다.
+
+- **isnumeric()**
+  문자열이 숫자로 되어있다면 True, 그렇지 않다면 False를 반환한다.
+
+- **isidentifier()**
+  문자열이 identifier(알파벳이나 '\_'로 시작하고 알파벳, 숫자, '\_'로만 구성)라면 True, 그렇지 않다면 False를 반환한다.
+
+- **isprintable()**
+  문자열이 출력 가능한 문자로만 되어있다면 True, 그렇지 않다면 False를 반환한다.
+
+- **join(*sequence*)**
+  시퀀스형 변수를 문자열로 연결하여 반환한다.
+
+- **lower()**
+  문자열의 모든 알파벳을 소문자로 바꾼다.
+
+- **lstrip([*chars*])**
+  문자열의 왼쪽을 잘라낸다. chars를 지정하지 않으면 공백 문자를 제거하며, 지정되어 있을 경우 해당 문자들을 제거한다.
+
+- **maketrans(*x*[, *y*[, *z*]])**
+  translate() 메서드에 쓰일 변환용 맵을 반환한다. 인자가 하나일 경우에는 딕셔너리를 입력받고, 두 개일 경우에는 길이가 같은 문자열을 2개를 입력받고, 세 개일 경우에는 길이가 같은 문자열 2개와 None으로 대체될 문자열을 입력받는다.
+
+- **partition(*separator*)**
+  문자열을 separator로 나눠 3등분된 튜플을 반환한다.
+
+  ```python
+  >>> 'python is powerful'.partition('is')
+  ('python ', 'is', ' powerful')     
+  ```
+
+- **replace(*old*, *new*[, *count*])**
+  문자열에서 old를 new로 교체한 문자열을 반환한다. count 옵션을 사용할 경우 해당 횟수만큼만 교체한다.
+
+- **rfind(*keyword*[, *start*[, *end*]])**
+  문자열의 뒤에서부터 keyword가 나타나는 첫 번째 위치를 반환한다. 찾지 못한다면 -1을 반환한다. 범위를 지정할 수 있다.
+
+- **rindex(*keyword*[, *start*[, *end*]])**
+  rfind() 메서드와 유사하지만 찾지 못할 경우 ValueError 예외가 발생한다.
+
+- **rpartition(*separator*)**
+  문자열을 뒤에서부터 separator로 나눠 3등분된 튜플을 반환한다.
+
+- **rsplit([*separator*[, *maxsplit*]])**
+  문자열을 separator로 분리하여 리스트로 반환한다. separator가 생략되면 공백 문자를 구분자로 한다. maxsplit을 지정하면 뒤에서부터 지정한 횟수 만큼만 분리한다.
