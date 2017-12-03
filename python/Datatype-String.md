@@ -153,11 +153,11 @@ sys.stdout.encoding
   파이썬3에서 str 클래스는 기본적으로 유니코드이다. 이 메서드를 사용하면 인코딩이 있는 바이너리로 변환된다.
 
   - errors options
-  - **'strict'** : 기본 값. 올바르지 않은 인코딩을 적용하면 UnicodeEncodeError 예외가 발생한다.
-  - **'ignore'** : 에러가 난 부분을 무시한다.
-  - **'replace'** : 에러가 난 부분을 '?' 등의 문자로 대체한다.
-  - **'xmlcharrefreplace'** : 에러가 난 부분을 XML 표현 방식으로 대체한다.
-  - **'backslashreplace'** : 에러가 난 부분을 backslash 표현 방식으로 대체한다.
+    - **'strict'** : 기본 값. 올바르지 않은 인코딩을 적용하면 UnicodeEncodeError 예외가 발생한다.
+    - **'ignore'** : 에러가 난 부분을 무시한다.
+    - **'replace'** : 에러가 난 부분을 '?' 등의 문자로 대체한다.
+    - **'xmlcharrefreplace'** : 에러가 난 부분을 XML 표현 방식으로 대체한다.
+    - **'backslashreplace'** : 에러가 난 부분을 backslash 표현 방식으로 대체한다.
 
 - **endswith(*postfix*[, *start*[, *end*]])**
   postfix로 문자열이 끝나면 True, 그렇지 않다면 False를 반환한다. 범위를 지정할 수 있다.
