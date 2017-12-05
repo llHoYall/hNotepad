@@ -41,7 +41,7 @@ tags: python
 
 ##### Using
 
-이제 독립적인 환경하에서 각종 패키지를 설치하고 개발을 한다.
+이제 독립적인 환경하에서 필요한 각종 패키지를 설치하고 개발을 한다.
 
 ##### Deactivation
 
@@ -50,4 +50,60 @@ tags: python
 가상 환경 사이를 옮겨다니며 작업을 할 때는 반드시 이 작업을 해줘야 가상 환경이 꼬이는 일이 없다.
 
 > $ deactivate
+
+&nbsp;
+
+## Jupyter
+
+노트북 형태로 파이썬 코드를 작성, 실행, 관리할 수 있는 도구이다.
+
+##### Installation
+
+역시 설치는 pip를 사용한다.
+
+> $ pip install jupyter
+
+##### Using
+
+아래의 명령을 입력하면 자동으로 웹브라우저에서 실행이 된다.
+
+> $ jupyter notebook
+
+아래의 명령을 입력하면 현재 사용 가능한 kernel들을 확인할 수 있다.
+
+> $ jupyter kernelspec list
+
+##### Working with virtualenv
+
+사용할 virtualenv를 activation한다.
+
+jupyter의 kernel 디렉토리로 가서 커널 디렉토리를 하나 만든다.
+
+> // MAC
+>
+> $ cd /Users/mac/Library/Jupyter/kernels
+>
+> // Windows
+>
+> $ cd C:\Python36\share\jupyter\kernels
+>
+> $ mkdir HoYa
+
+kernel.json 파일을 하나 만들어준다.
+
+```json
+{
+  "argv": [
+    "python",	# virtualenv의 /bin/python 경로
+    "-m",
+    "ipykernel",
+    "-f",
+    "{connection_file}"
+  ],
+  "display_name": "HoYa",
+  "language": "python"
+}
+```
+
+jupyter notebook을 실행하여 새로 만든 커널로 사용하면 된다.
 
