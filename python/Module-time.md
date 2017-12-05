@@ -26,6 +26,7 @@ time 모듈은 시간에 관한 모듈이다.
 - **gmtime([*secs*])** : 입력된 시간을 변환하여 UTC 기준의 struct_time 시퀀스 객체로 반환한다. 인자를 입력하지 않으면 time()을 사용하여 현재 시간을 변환한다.
 - **localtime([*secs*])** : 입력된 시간을 변환하여 LST 기준의 struct_time 시퀀스 객체를 반환한다. 인자를 입력하지 않으면 time()을 사용하여 현재 시간을 변환한다.
 - **asctime([*t*])** : struct_time 시퀀스 객체를 인자로 받아 'Mon Dec 4 21:52:28 2017'과 같은 형태로 반환한다.
+- **ctime([*secs*])** : epoch 이후로 누적된 초를 'Mon Dec 4 21:52:28 2017'과 같은 형태의 문자열로 변환한다. 인자를 입력하지 않으면 time()을 사용하여 현재 시간을 변환한다.
 - **mktime(*t*)** : struct_time 시퀀스 객체를 인자로 받아 time()과 같은 누적된 초를 반환한다.
 - **strftime(*format*[, *t*])** : struct_time 객체를 사용자가 정의한 형식으로 변경해 문자열을 반환한다.
   - format
@@ -44,6 +45,8 @@ time 모듈은 시간에 관한 모듈이다.
     - **%A** : 축약되지 않은 요일.
     - **%w** : 숫자로 표현한 요일.
     - **%j** : 1월 1일부터 누적된 날짜 (001 ~ 366)
+    - **%x** : 날짜. (yy/mm/dd)
+    - **%X** : 시간. (hh:mm:ss)
 - **strptime(*string*[, *format*])** : 사용자가 정의한 형식 문자열을 struct_time 객체로 변환한다. format은 strftime()과 동일하다.
 
 #### struct_time
