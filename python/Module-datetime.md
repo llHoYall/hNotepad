@@ -52,3 +52,14 @@ tags: python
 - **microsecond** : 마이크로초. (Read only)
 - **max** : time 객체의 최대값. (time(23, 59, 59, 999999))
 - **min** : time 객체의 최소값. (time(0, 0, 0, 0))
+
+&nbsp;
+
+## Datetime Class
+
+#### Methods
+
+- **datetime(*year*, *month*, *day*[, *hour*[, *minute*[, *second*[, *microsecond*[, *tzinfo*]]]]])** : 날짜 정보를 입력받아 datetime 객체를 생성한다. 생략한 인자는 0으로 초기화 된다. 잘못된 정보를 입력하면 ValueError 예외가 발생한다.
+
+#### Attributes
+
