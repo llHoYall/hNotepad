@@ -77,33 +77,11 @@ tags: python
 
 사용할 virtualenv를 activation한다.
 
-jupyter의 kernel 디렉토리로 가서 커널 디렉토리를 하나 만든다.
+jupyter에서 사용할 kernel을 만든다.
 
-> // MAC
->
-> $ cd /Users/mac/Library/Jupyter/kernels
->
-> // Windows
->
-> $ cd C:\Python36\share\jupyter\kernels
->
-> $ mkdir HoYa
+> $ ipython kernel install
 
-kernel.json 파일을 하나 만들어준다.
-
-```json
-{
-  "argv": [
-    "python",	# virtualenv의 /bin/python 경로
-    "-m",
-    "ipykernel",
-    "-f",
-    "{connection_file}"
-  ],
-  "display_name": "HoYa",
-  "language": "python"
-}
-```
+만들어진 kernel의 디렉토리명과 kernel.json 파일의 "display_name"을 원하는 이름으로 변경한다.
 
 jupyter notebook을 실행하여 새로 만든 커널로 사용하면 된다.
 
