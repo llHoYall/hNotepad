@@ -40,3 +40,64 @@ tags: python
   - DEFERRED
   - IMMEDIATE
   - EXCLUSIVE
+
+## Cursor Class
+
+데이터베이스에 SQL 문장을 수행하고, 조회된 결과를 가져오는 클래스이다.
+
+#### Methods
+
+- **execute(*sql*[, *parameters*])** : SQL 문장을 실행한다.
+- **executemany(*sql*, *seq_of_parameters*)** : 동일한 SQL 문장을 매개변수만 변경하면서 수행한다.
+- **executescript(*sql_script*)** : 세미콜론으로 구분된 연속된 SQL 문장을 수행한다.
+- **fetchone()** : Record set으로부터 데이터 1개를 반환한다. 데이터가 없는 경우 None을 반환한다.
+- **fetchmany([size=cursor.arraysize])** : 결과로부터 입력받은 size 만큼의 데이터를 리스트 형태로 반환한다. 데이터가 없는 경우 빈 리스트를 반환한다.
+- **fetchall()** : 결과 모두를 리스트 형태로 반환한다. 데이터가 없는 경우 빈 리스트를 반환한다.
+
+## Row Class
+
+Result set에서 Row 객체는 관계형 데이터베이스 모델에서 튜플을 나타낸다. 예를 들어 JOIN 연산을 이용해 2개 이상의 테이블을 조회한 결과인 경우, Row 객체는 결과 뷰의 한 행을 나타낸다.
+
+&nbsp;
+
+```python
+import sqlite3
+
+# DB Connection
+conn = sqlite3.connect("test.db")	# Make file to storage
+conn = sqlite3.connect(":memory:")	# Make file to memory
+# 메모리에 저장하면 연결 종료 시 작업 내용이 사라지지만 연산 속도가 빠르다.
+
+# SQL Execution
+cur = conn.cursor()
+cur.execute("CREATE TABLE PhoneBook(Name text, PhoneNum text);")
+cur.execute("INSERT INTO PhoneBook VALUES('HoYa', '012-3456-7890');")
+
+name = 'HoYa'
+phoneNumber = '012-3456-7890'
+cur.execute('INSERT INTO PhoneBook VALUES(?, ?);', (name, phoneNumber))
+cur.execute('INSERT INTO PhoneBook VALUES(:inputName, :inputNum);', {'inputNum': phoneNumber, 'inputName': name})
+
+datalist = (('kim', '010-2222-3333'), ('lee', '010-4444-5555'))
+cur.executemany('INSERT INTO PhoneBook VALUES(?, ?);', datalist)
+
+def dataGenerator():
+    datalist = {('kim', '010-2222-3333'), ('lee', '010-4444-5555')}
+    for item in datalist:
+        yield item
+cur.executemany('INSERT INTO PhoneBook VALUES(?, ?);', dataGenerator())   
+
+with open('script.txt') as f:
+    SQLScript = f.read()
+cur.executescript(SQLScript)
+
+# Record Fetch
+cur.execute('SELECT * FROM PhoneBook;')
+for row in cur:
+    print(row)
+cur.execute('SELECT * FROM PhoneBook;')
+cur.fetchone()
+cur.fetchmany(2)
+cur.fetchall()
+```
+
