@@ -96,48 +96,13 @@ Plugin
 
 최초 실행 시 모드 설정을 물어본다. 1을 누르면 자동으로 플러그인을 설치한다.
 
-### fzf
+- **fzf**
+  https://github.com/junegunn/fzf
 
-fuzzy finder 도구이다. 증분 검색을 통하여 원하는 파일이나 히스토리를 쉽고 빠르게 찾을 수 있게 해준다.
+- **fasd**
+  https://github.com/clvv/fasd
 
-##### Installation
 
-> $ brew install fzf
->
-> $ $(brew --prefix)/opt/fzf/install
-
-##### Usage
-
-- `^ + t` : 하위 디렉토리 파일 검색
-- `^ + r` : 히스토리 검색
-- `<ESC> + c` : 하위 디렉토리 검색 후 이동
-
-### fasd
-
-사용빈도가 높은 파일 또는 디렉토리 검색을 편하게 해준다.
-
-##### Installation
-
-> $ brew install fasd
-
-##### Setting
-
-~/.zshrc에 plugin을 추가한다.
-
-```shell
-plugins=(
-	...
-	fasd
-	...
-)
-```
-
-##### Usage
-
-- `z` : 디렉토리 이동
-- `s` : 파일 or 디렉토리 검색
-
-단축키를 누르고 \<TAB\> 자동 완성을 통해 명령어 입력 시 언제나 사용할 수 있다. 심지어 다른 명령어 중간에서도 사용 가능하다.
 
 &nbsp;
 
@@ -181,5 +146,5 @@ plugins=(
 )
 ```
 
-### tmux
+- **tmux**
 
