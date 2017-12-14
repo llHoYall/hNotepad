@@ -15,11 +15,18 @@ tags: [tools, fasd]
 
 -  MAC
 
-> $ brew install fasd
+  > $ brew install fasd
+
+- Linux
+
+  > $ git clone --depth 1 https://github.com/clvv/fasd ~/.fasd
+  > $ cd ~/.fasd
+  > $ sudo make install		# install to system-wide
+  > \$ PREFIX=\$HOME make install		# install to home
 
 #### Setting
 
-zsh에 설정을 추가한다.
+zsh에 설정을 추가한다. 맥에서는 잘되는 데, 리눅스에선 잘 안된다.
 
 ```shell
 # .zshrc
@@ -33,6 +40,10 @@ plugins=(
 
 #### Usage
 
-- `z` : 디렉토리 이동
+- `a` : any
+- `d` : directories
+- `f` : files
 - `s` : 파일 or 디렉토리 검색
+- `z` : 디렉토리 이동
+
 
