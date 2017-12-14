@@ -17,10 +17,29 @@ Fuzzy Finder 도구이다.
 
 -  MAC
 
-> $ brew install fzf
->
-> \# To install useful key bindings and fuzzy completion
-> $ $(brew --prefix)/opt/fzf/install
+  > $ brew install fzf
+  >
+  > \# To install useful key bindings and fuzzy completion
+  > $ $(brew --prefix)/opt/fzf/install
+
+-  Linux
+
+   > $ git clone --depth 1 https://github.com/junegunn/fzf ~/.fzf
+   > $ ~/.fzf/install
+
+-  Windows
+
+   > $ choco install fzf
+
+#### Setting
+
+bash에는 설정이 잘 되는 데, zsh에는 잘 안되는 것 같다. 직접 zsh 설정에 다음 내용을 추가한다.
+
+```shell
+# .zshrc
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+```
 
 #### Usage
 
