@@ -155,5 +155,117 @@ cur.execute('SELECT hAvg(Age) FROM PhoneBook')
 # Datatype
 cur.execute('CREATE TABLE testTable1(Name TEXT, Age INTEGER, Money REAL);')
 cur.execute('CREATE TABLE testTable2(Name str, Age int, Money float);')
+
+class Point(object):
+    def __init__(self, x, y):
+        self.x, self.y = x, y
+        
+	def __repr__(self):
+        return "Point(%f, %f)" % (self.x, self.y)
+def pointAdapter(point):
+    return "%f:%f" % (point.x, point.y)
+def pointConverter(s):
+    x, y = list(map(float, s.decode().split(':')))
+    return Point(x, y)
+sqlite3.register_adapter(Point, pointAdapter)
+sqlite3.register_converter('point', pointConverter)
+p1 = Point(4, -3.2)
+conn = sqlite3.connect(':memory:', detect_types=sqlite3.PARSE_DECLTYPES)
+cur = conn.cursor()
+cur.execute('create table test(p point)')
+cur.execute('insert into test values (?)', (p, ))
+
+# Make Dump
+for l in conn.iterdump():
+    print(l)
+
+with open('dump.sql', 'w') as f:
+    for l in conn.iterdump():
+        f.write('{0}\n'.format(l))
+```
+
+&nbsp;
+
+## Make Command-line Tool
+
+```python
+# pysqlite_command.py
+
+# 표준 SQL 구문은 모두 수행 가능하며, 입력의 편의성을 위해 하나의 구문은 2줄 이상 연속으로 입력할 수 있게 함.
+# SQL 구문의 종료는 ';'을 명시적으로 사용해야 하며, 한 번에 1개의 구문만 입력할 수 있게 함.
+# SELECT 문에 대해서는 화면에 결과를 출력.
+# 프로그램을 실행할 때 명시적으로 데이터베이스 파일을 지정하면 그 파일에 수행 결과를 저장.
+# 데이터베이스 파일을 지정하지 않으면 메모리 내에서만 수행되고, 결과는 파일에 저장하지 않음.
+# SQL 구문이 아닌 특수 명령어로 데이터베이스 덤프 기능을 지원하며, 파일과 화면으로 덤프된 내용이 출력 가능하도록 함.
+
+import sqlite3
+import sys
+import re
+
+if len(sys.argv) == 2:
+    path = sys.argv[1]
+else:
+	path = ':memory:'
+    
+conn = sqlite3.connect(path)
+conn.isolation_level = None
+cur = conn.cursor()
+
+buffer = ""
+
+def PrintIntro():
+    print("Usage")
+    print("  -   help: .help;")
+    
+def PrintHelp():
+    print(".dump\t\tDump DB")
+    
+def SQLDump(conn, file=None):
+    if file != None:
+        f = open(file, 'w')
+	else:
+        f = sys.stdout
+        
+	for l in conn.iterdump():
+        f.write("{0}\n".format(l))
+        
+	if f != sys.stdout:
+        f.close()
+
+PrintIntro()
+
+while True:
+    line = input("pysqlite >> ")
+    if buffer == "" and line == "":
+        break
+	buffer += line
+    
+    if sqlite3.complete_statement(buffer):
+        buffer = buffer.strip()
+        
+        if buffer[0] == ".":
+            cmd = re.sub('[ ;]', ' ', buffer).split()
+            if cmd[0] == '.help':
+         		PrintHelp()
+			elif cmd[0] == '.dump':
+                if len(cmd) == 2:
+                    SQLDump(conn, cmd[1])
+				else:
+                    SQLDump(conn)
+			else:
+                try:
+                    buffer = buffer.strip()
+                   	cur.execute(buffer)
+                    
+                    if buffer.lstrip().upper().startswith("SELECT"):
+                        print(cur.fetchall())
+                        
+				except sqlite3.Error as e:
+                    print("Error: ", e.args[0])
+				else:
+                    print("Success")
+			buffer = ""
+conn.close()
+print("Exit Program")
 ```
 
