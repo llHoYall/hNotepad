@@ -46,9 +46,9 @@ plugins=(
 )
 ```
 
-##### <u>Theme</u>
+##### <u>gpakosz/.tmux</u>
 
-테마를 세팅할 수 있다. 이것을 참고하여 개인 테마를 만들면 된다.
+다른사람의 설정이다. 이것을 참고하여 개인 설정을 만들수도 있다.
 
 > $ cd
 > $ git clone https://github.com/gpakosz/.tmux
@@ -119,3 +119,8 @@ plugins=(
   - `<CTRL-d>`
 
 
+&nbsp;
+
+### Customizing
+
+`$ tmux show-options -g | grep status` : status line 의 현재 설정을 확인한다.
