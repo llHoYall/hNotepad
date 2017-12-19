@@ -62,45 +62,17 @@ tags: [MAC,OSX]
 
 > $ brew install git git-lfs
 
-git-lfs는 large file storage로 용량이 큰 바이너리 파일을 git으로 관리할 때 유용하다.
-
-### Neovim
-
-##### Installation
-
-> $ brew install neovim
->
-> $ brew tap caskroom/fonts
->
-> $ brew cask install font-hack-nerd-font
-
-##### Setting
-
-~/.zshrc에 neovim 설정을 추가한다.
-
-```shell
-alias vim="nvim"
-alias vi="nvim"
-alias vimdiff="nvim -d"
-
-export EDITOR=/usr/local/bin/nvim
-```
-
-iTerm2에 폰트를 설정한다.
-
-`Preferences -> Profiles -> Text -> Font -> Use a different font for non-ASCII text: Knack Regular Nerd Font Complete`
-
-Plugin
-
-> $ curl -sLf https://spacevim.org/install.sh | bash
-
-최초 실행 시 모드 설정을 물어본다. 1을 누르면 자동으로 플러그인을 설치한다.
+- **neovim**
+  https://neovim.io/
 
 - **fzf**
   https://github.com/junegunn/fzf
 
 - **fasd**
   https://github.com/clvv/fasd
+
+- **tig**
+  https://github.com/jonas/tig
 
 
 
