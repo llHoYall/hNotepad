@@ -68,11 +68,56 @@ DOM 안에는 다음과 같은 객체가 들어 있다.
 - **Text** : 도큐먼트에서 문자 정보를 포함하고 있는 노드 객체.
 - **ProcessingInstruction** : 도큐먼트 처리를 위한 도구를 나타내는 객체.
 
+### minidom
+
+#### Methods
+
+- **parse(*file*[, *parser*])** : file로부터 XML 문서를 읽어서 document 객체를 반환한다. parser 인자가 입력되면 minidom의 기본 파서가 아닌 사용자가 원하는 파서를 사용할 수 있다. 파서는 SAX2 parser 객체만 사용가능하다.
+- **parseString(*data*, *parser*)** : parse9)와 비슷하지만 입력으로 파일대신 문자열을 받는다.
+
+### Document 객체
+
+#### Methods
+
+- **createElement(*tagName*)** : 새로운 엘리먼트 객체를 생성한다. tagName은 생성할 엘리먼트의 이름이된다.
+- **createTextNode(*data*)** : 인자 data로부터 문자 노드를 생성하고 반환한다.
+- **createAttribute(*name*)** : 속성 노드를 생성하고 생성된 객체를 반환한다. 이 메서드는 단지 속성 개체를 만들 뿐 원하는 엘리먼트와 연결시킬 수 없다. 엘리먼트와 연결하려면 setAttributeNode() 메서드를 사용해야 한다.
+- **getElementsByTagName(*tagName*)** : 인자 tagName과 이름이 같은 모든 엘리먼트를 가져온다. 결과값으로 nodeList가 반환된다.
+
 &nbsp;
 
-## SAX
+## SAX (Simple API for XML)
 
-xml.sax
+XML 문서를 파싱할 때 구성요소를 발견할 때마다 이벤트를 발생시켜 XML 문서를 처리하는 모듈이다. Namespace는 xml.sax이다.
+
+SAX는 DOM과 달리 XML 문서의 내용을 변경할 수 없고 (Read Only), 파싱은 문서의 처음부터 아래 부분으로만 진행된다 (Forward). 사용자는 원하는 요소를 처리하기 위한 함수를 생성하고 이벤트 핸들러에 함수를 등록한다. 객체 기반 방식보다는 빠르지만 한 번 처리한 문서는 다시 사용할 수 없다.
+
+#### Methods
+
+- **make_parser([*parser_list*])** : SAX XMLReader를 생성하고 반환한다. parser_list가 선언되어 있으면 parser_list의 파서를 먼저 생성한다. parser_list는 create_parser() 메서드가 포함된 모듈들의 리스트이다.
+- **parse(*filename_or_stream*, *handler*[, *error_handler*])** : 파일이나 스트림으로부터 입력받은 XML 문서를 파싱한다. 핸들러는 SAXContentHandler 인스턴스여야 한다. Error_handler는 SAX ErrorHandler 인스턴스와 연결해야 하고 만약 생략하면 에러가 발생할 때 SAXParseException 예외가 발생한다.
+- **parseString(*string*, *handler*[, *error_handler*])** : parse() 메서드와 비슷하지만, XML 문서 입력을 문자열로 받는 점이 다르다.
+
+### xml.sax.handler
+
+- **ContentHandler** : SAX 중에서 가장 많이 사용되는 핸들러이다. 문서 안의 정보들이 파싱되면서 순서대로 이벤트가 ContentHandler를 통해 호출된다.
+- **DTDHandler** : DTD 이벤트를 위한 핸들러이다.
+- **ErrorHandler** : 에러 혹은 경고가 발생했을 때 호출된다.
+
+### xml.sax.xmlreader
+
+- **XMLReader** Class : SAX 파서의 기본 클래스이다.
+- **Locator** Class : 문서 내부의 locator와 SAX 이벤트와의 연결을 위한 클래스이다.
+- **InputSource([*systemId*])** Class : XML 문서의 인코딩을 파서에 알려주거나 바이트 스트림 혹은 캐릭터 스트림을 가져오거나 설정할 수 있다.
+
+### XMLReader Class
+
+#### Methods
+
+- **parse(*source*)** : source로 입력된 XML 문서를 파싱하면서 SAX 이벤트를 발생시킨다.
+- **getContentHandler()** : 현재 ContentHandler 객체를 가져온다.
+- **setContentHandler(*handler*)** : 인자로 전달된 ContentHandler 인스턴스를 현재 ContentHandler로 설정한다.
+- **setLocale(*locale*)** : 경고나 에러 출력을 위한 로케일 정보를 설정한다.
 
 &nbsp;
 
