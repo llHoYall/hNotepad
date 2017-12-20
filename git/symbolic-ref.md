@@ -1,13 +1,13 @@
 ---
 layout: post
-title: symbolic-ref
+title: Symbolic-ref
 category: git
 tags: git
 ---
 
 &nbsp;
 
-# symbolic-ref
+# Symbolic-ref
 
 심볼릭 레퍼런스를 읽고, 수정하고, 삭제하는 명령어이다.
 
