@@ -19,10 +19,17 @@ tags: [tools, fasd]
 
 - Linux
 
+<<<<<<< Updated upstream
   > $ git clone --depth 1 https://github.com/clvv/fasd ~/.fasd
   > $ cd ~/.fasd
   > $ sudo make install		# install to system-wide
   > \$ PREFIX=\$HOME make install		# install to home
+=======
+  > $ git clone --depth 1 https://github.com/clvv/fasd ~/.fasd 
+  > $ cd ~/.fasd
+  > $ sudo make install		# install to system-wide
+  > \$ PREFIX=\$HOME make install		# install to home folder
+>>>>>>> Stashed changes
 
 #### Setting
 
@@ -40,10 +47,26 @@ plugins=(
 
 #### Usage
 
+<<<<<<< Updated upstream
 - `a` : any
 - `d` : directories
 - `f` : files
 - `s` : 파일 or 디렉토리 검색
 - `z` : 디렉토리 이동
 
+=======
+맥에서는 잘 되는데 리눅스에서는 잘 안되고 있다.
+
+- `a` : any
+- `f` : files
+- `d` : directories
+- `s` : show/search/select
+- `z` : 디렉토리 이동
+
+
+#### Reference
+
+- https://github.com/clvv/fasd
+
+>>>>>>> Stashed changes
 
