@@ -104,11 +104,8 @@ plugins=(
   - `<CTRL-b> + {` : 왼쪽
   - `<CTRL-b> + }` : 오른쪽
   - `<CTRL-b> + \<ARROW>`
-- 스크롤
-  - `<CTRL-b> + [` : 스크롤 모드.
-  - `q` : 스크롤 모드 종료.
 - 크기 변경
-  - `<CTRL-b> + :` : 명령어 모드.
+  - `<CTRL-b> + :` : 명령어 모드
     - **resize-pane -L #**
     - **resize-pane -R #**
     - **resize-pane -D #**
