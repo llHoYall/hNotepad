@@ -23,7 +23,7 @@ graph LR
 
 ### History
 
-![ML_History](C:\Users\HoYa\hNotepad\MachineLearning\ML_History.PNG)
+![ML_History](./ML_History.PNG)
 
 #### Artificial Intelligence
 
