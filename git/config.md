@@ -81,3 +81,7 @@ Git의 설정은 3단계의 scope를 갖는다.
 > $ git config **--global commit.template** <*file*>
 > - Commit 시, 명시한 파일에 있는 내용을 자동으로 넣는다.
 
+> $ git config --local **credential.username** "*UserName*"
+>
+> - 해당 git repository의 계정을 변경한다.
+
