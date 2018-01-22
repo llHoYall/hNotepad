@@ -5,7 +5,7 @@ category: vim
 tags: vim
 ---
 
-&nbsp;
+
 
 # Autocommands
 
@@ -30,7 +30,7 @@ Autocommand는 특정한 이벤트마다 원하는 동작을 자동으로 수행
 
 위의 내용은 모든 파일의 저장 전에 마지막에 날짜를 붙여라라는 것이다.
 
-&nbsp;
+
 
 #### group
 
@@ -48,7 +48,7 @@ Autocommand는 특정한 이벤트마다 원하는 동작을 자동으로 수행
 :autocmd cprograms BufReadPost *.cpp :set sw=3 sts=3
 ```
 
-&nbsp;
+
 
 #### events
 
@@ -60,7 +60,7 @@ autocmd를 적용할 이벤트를 나타낸다.
 - BufReadPost
 - Filetype
 
-&nbsp;
+
 
 #### file\_pattern
 
@@ -74,7 +74,7 @@ autocmd가 적용될 파일들을 나타낸다.
 - . - Matches a dot
 - a{b,c} - Matches "ab" and "ac"
 
-&nbsp;
+
 
 #### nested
 
@@ -84,7 +84,7 @@ autocmd가 적용될 파일들을 나타낸다.
 :autocmd FileChangedShell * neested edit
 ```
 
-&nbsp;
+
 
 #### command
 
@@ -143,7 +143,7 @@ command-line에서는 안된다.
 :au	SwapExists	*	let v:swapchoice = 'o'
 ```
 
-&nbsp;
+
 
 ### Deleting
 
@@ -152,7 +152,7 @@ command-line에서는 안된다.
 > :autocmd! cprograms
 > :autocmd! FileWritePre *
 
-&nbsp;
+
 
 ### Listing
 
@@ -166,7 +166,7 @@ command-line에서는 안된다.
 > :autocmd BufNewFile
 > :autocmd * \*.c
 
-&nbsp;
+
 
 ### Ignoring Events
 
@@ -178,7 +178,7 @@ command-line에서는 안된다.
 > :set eventignore=all
 > :set eventignore=
 
-&nbsp;
+
 
 ### Reference
 
