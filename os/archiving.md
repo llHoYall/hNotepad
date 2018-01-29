@@ -37,13 +37,13 @@ bzip2는 하나의 파일을 bz2 형식으로 압축/해제한다.
 
 - 압축하기
 
-  `$ tar -cvfz <output.tar.gz> <files>`
+  `$ tar -czvf <output.tar.gz> <files>`
 
   `$ gzip <files>`
 
 - 해제하기
 
-  `$ tar -xvfz <input.tar.gz>`
+  `$ tar -xzvf <input.tar.gz>`
 
   `$ gzip -d <input.tar.gz>`
 
@@ -51,13 +51,13 @@ bzip2는 하나의 파일을 bz2 형식으로 압축/해제한다.
 
 - 압축하기
 
-  `$ tar -cvfj <output.tar.bz2> <files>`
+  `$ tar -cjvf <output.tar.bz2> <files>`
 
   `$ bzip2 <files>`
 
 - 해제하기
 
-  `$ tar -xvfj <output.tar.bz2> <files>`
+  `$ tar -xjvf <output.tar.bz2> <files>`
 
   `$ bzip2 -d <output.tar.bz2>`
 
