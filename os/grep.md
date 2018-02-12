@@ -15,7 +15,8 @@ tags: [os, linux, mac, unix]
 
 ##### Usage
 
-- $ grep -r "main" *.[ch]
+- $ grep -rn "main" \*\*/\*.[ch]
 
   현재 디렉토리 및 하위디렉토리의 *.c, *.h 파일에서 'main'이라는 문자열을 찾는다.
+
 
