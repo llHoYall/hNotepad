@@ -16,7 +16,11 @@ tags: [os, linux, mac, unix]
 
 상세하게 옵션 설정을 해서 추가를 하려면 `useradd` 명령어를 사용하고, 간단하게 기본 설정으로 추가하려면 `adduser` 명령어를 사용한다.
 
-> $ adduser hoya
+> $ adduser \<account>
+
+sudo 권한을 주려면 다음과 같이 한다.
+
+> $ sudo adduser \<account> sudo
 
 ### SSH 설정
 
