@@ -18,3 +18,48 @@ tags: [os, linux, mac, unix]
 
 > $ adduser hoya
 
+### SSH 설정
+
+다음 패키지를 설치만 하면 된다.
+
+> $ sudo apt install openssh-server
+
+### Samba 설정
+
+다음 패키지를 설치한다.
+
+> $ sudo apt install samba
+
+설정 파일을 편집한다.
+
+> $ sudo vim /etc/samba/smb.conf
+
+```sh
+...
+
+[user]
+	comment = My samba server
+	path = /home/user
+	writeable = yes
+```
+
+이제 서비스를 재시작한다.
+
+> $ sudo service smbd restart
+
+### VNC 설정
+
+다음 패키지를 설치한다.
+
+> $ sudo apt install tightvncserver
+
+비밀번호를 설정한다.
+
+> $ vncserver
+
+이제 tight vnc viewer로 원격 접속을 하면 된다. 어쩌고저쩌고:#과 같이 숫자가 있는 데, 이것이 세션 번호라고 보면 된다. tight vnc의 기본 포트는 5900이고, 여기에 이 세션 번호를 더해주면 접속할 수 있다. 
+
+즉, Remote Host에 \<IP:Port>와 같이 입력을 해준다. IP가 192.168.0.7이고 세션 번호가 3이라고 하면 `192.168.0.7:5903`과 같다.
+
+추가로, 열려있는 서버를 삭제하려면 `$ vncserver -kill :#`과 같이 한다.
+
