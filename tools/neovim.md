@@ -7,7 +7,7 @@ tags: [tools, neovim]
 
 &nbsp;
 
-# fasd
+# neovim
 
 사용빈도가 높은 파일 또는 디렉토리 검색을 편하게 해준다.
 
