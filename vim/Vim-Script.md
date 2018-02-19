@@ -47,6 +47,8 @@ tags: vim
 
 옵션 사이를 공백 문자로 구분하여 여러 옵션을 한 꺼번에 설정하거나 해제할 수 있다.
 
+`:setlocal` 명령어를 사용하여 현재 버퍼에만 적용되는 local 설정을 할 수 있다.
+
 
 
 ## Key Mapping
@@ -58,6 +60,8 @@ tags: vim
 `:unmap` 명령어를 사용하여 맵핑 된 키를 해제할 수 있다.
 
 `:noremap` 명령어를 사용하면 재귀적으로 매핑이 일어나는 것을 막을 수 있다. 내가 설정한 매핑이 다른 플러그인 등에 영향을 받아 원하지 않는 동작을 하게될 수도 있으니 항상 이렇게 사용하자.
+
+`:nnoremap <buffer>` 와 같이 `<buffer>`를 붙이면 해당 buffer에만 적용되는 local 설정이 된다.
 
 
 
@@ -83,6 +87,35 @@ Insert 모드에서 약어 설정된 단어뒤에 non-keyword 문자가 입력�
 - 아스키 문자 192~255.
 
 Mapping은 해당 문자들이 눌리기만 하면 바로 실행이 되지만, Abbreviation은 해당 문자들이 앞뒤의 non-keyword로 분리된 경우에만 실행이 된다.
+
+`:iabbrev <buffer>`와 같이 `<buffer>`를 붙이면 해당 buffer에만 적용되는 local 설정이 된다.
+
+
+
+## Autocommands
+
+`:autocmd <event> <pattern> <command> ` 명령어를  사용하여 특정 이벤트마다 자동으로 실행되는 autocommand 설정을 할 수 있다.
+
+- Event는 ','로 구분하여 여러 개를 설정할 수 있다.
+  - BufNewFile
+  - BufRead
+  - BufWritePre
+  - FileType \<filetype>
+- Pattern은 적용될 파일을 설정한다.
+  - *, *.txt, *.html
+- Command는 실제 실행될 명령어를 설정한다.
+
+`:augroup` 명령어를 사용하여 group을 지정하여 묶을 수 있다.
+
+```vim
+augroup test
+	autocmd!
+	autocmd BufWrite * :echom "Hello"
+	autocmd BufWrite * :echom "World"
+augroup END
+```
+
+Group 내에서 `autocmd!` 를 실행하면 해당 그룹의 내용을 clear한다.
 
 
 
