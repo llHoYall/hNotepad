@@ -45,6 +45,7 @@ sudo 권한을 주려면 다음과 같이 한다.
 	comment = My samba server
 	path = /home/user
 	writeable = yes
+	map archive = no
 ```
 
 이제 서비스를 재시작한다.
