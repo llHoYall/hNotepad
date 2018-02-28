@@ -63,7 +63,7 @@ tags: vim
 
 `:noremap <buffer>` 와 같이 `<buffer>`를 붙이면 해당 buffer에만 적용되는 local 설정이 된다.
 
-Operator-Pending 맵핑을 하게되면, 해당 내용이 실행되기 전에 Visual 모드에서 선택된 영역이 존재하면 해당 범위에 대해 동작하고, 그렇지 않다면 커서의 위치부터 새로운 위치 사이의 범위에 대해 동작한다. `:onoremap in( :<C-u>normal! f(vi(<CR>` 과 같이 `<C-u>` 를 사용하면 Visual 모드에서 선택된 영역이 취소된다.
+Operator-Pending 맵핑을 하게되면, 해당 내용이 실행되기 전에 Visual 모드에서 선택된 영역이 존재하면 해당 범위에 대해 동작하고, 그렇지 않다면 커서의 위치부터 새로운 위치 사이의 범위에 대해 동작한다. `:onoremap in( :<C-u>normal! f(vi(<CR>` 과 같이 `<C-u>` 를 사용하면 Visual 모드에서 선택된 영역이 취소된다. `:normal` 명령어를 사용하면, special character를 해석하지 못한다. 이 때는 `:execute "normal! gg"`와 같이 `:execute` 명령어를 사용한다.
 
 
 
@@ -118,6 +118,46 @@ augroup END
 ```
 
 Group 내에서 `autocmd!` 를 실행하면 해당 그룹의 내용을 clear한다.
+
+
+
+## Status Lines
+
+`statusline` 옵션을 설정하여 하단바를 꾸밀 수 있다.
+
+```vim
+:set statusline=%f
+:set statusline+=\ -\ 
+:set statusline+=FileType:\ 
+:set statusline+=%y
+```
+
+위와 같은 형태로 사용을 한다. %fomatter를 사용하여 원하는 내용을 넣는다. 공백 등의 특수 문자는 escape하여 사용한다.
+
+- %f : 파일 경로.
+- %F : 파일의 전체 경로.
+- %l : 현재 행.
+- %L : 전체 행.
+- %y : 파일 타입.
+- %= : statusline을 분리한다. 즉, 이 formatter 이전은 좌측에, 이후는 우측에 나타난다.
+
+Formatter는 일반적으로 다음의 형태를 따른다.
+
+`%-0{minwid}.{maxwid}{item}`
+
+- \- : 음수는 좌측 정렬, 양수는 우측 정렬.
+- 0 : 0을 붙이면 빈칸을 0으로 채워준다.
+- minwid : 최소 칸.
+- maxwid : 최대 칸
+- item : formatter
+
+예를 들면, 다음과 같은 형태로 사용한다.
+
+```vim
+:set statusline=%-4l/%04L		" 12  /0079
+:set statusline=%4L				"   79
+:set statusline=%.20F			" <d/vim/Vim-Script.md
+```
 
 
 
