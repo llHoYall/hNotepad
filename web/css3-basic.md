@@ -9,18 +9,33 @@ tags: [web, css3]
 
 # CSS3 - Basic
 
+####  Applying
+
+```css
+/* Inline */
+<div style="color: red;"></div>
+
+/* Embedded (Internal Style Sheet) */
+<head>
+	<style type="text/css">
+	<!--
+		body {
+    		font-size: 14pt;
+		}
+	//-->
+	</style>
+</head>
+
+/* External File Link (External Style Sheet) */
+<head>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+```
+
 #### Comments
 
 ```css
 /* Comments */
-```
-
-####  Link
-
-```css
-<head>
-	<link rel="stylesheet" type="text/css" href="xxx.css">
-</head>
 ```
 
 #### Grammar
@@ -38,3 +53,4 @@ selector[, selector] {
 - tag : tag selector, type selector.
 - \# : id selector.
 - . : class selector.
+
