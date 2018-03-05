@@ -9,6 +9,8 @@ tags: vim
 
 # Vim Script
 
+[TOC]
+
 ## Introduction
 
 - 설정 내용은 `$MYVIMRC`에 저장을 하면 항상 적용을 할 수 있다.
@@ -43,7 +45,9 @@ tags: vim
 
 `:set <opt>!` 명령어를 사용하여 옵션을 토글링할 수 있다.
 
-`:set <opt>?` 명령어를 사용하여 설정된 옵션값을 확인할 수 있다.
+`:set <opt>?` 명령어를 사용하여 설정된 옵션을 확인할 수 있다.
+
+`:echo &<opt>` 명령어를 사용하면 설정된 옵션 값을 확인할 수 있다.
 
 옵션 사이를 공백 문자로 구분하여 여러 옵션을 한 꺼번에 설정하거나 해제할 수 있다.
 
@@ -165,19 +169,43 @@ Formatter는 일반적으로 다음의 형태를 따른다.
 
 변수는 아스키문자, 숫자, \_(underscore)로 구성되며, 숫자로 시작할 수 없다.
 
-`:let` 명령어를 사용하면 설정된 변수 목록을 볼 수 있고, 다음의 문법으로 변수를 정의할 수 있다.
+`:let` 명령어를 사용하면 설정된 변수 목록을 볼 수 있다. 
 
-> let {*variable*} = {*expression*}
+`:let <variable> = <expression>` 명령어로 변수를 정의할 수 있다. 
+
+변수 부분에 `&<opt>`를 넣으면 옵션에 값을 설정할 수 있다. Vim에서 interger 0은 "false", integer 1은 "true"를 나타낸다.
+
+변수 부분에 `@<reg>`를 넣으면 레지스터의 내용을 설정할 수 있다.
 
 변수의 앞에 붙이는 문자에 따라 의미가 달라진다.
 
-> s:name - variable local to a script file
-> b:name - variable local to a buffer
-> w:name - variable local to a window
-> g:name - global variable (also in a function)
-> v:name - variable predefined by Vim
+- b:var - Local to the current buffer.
+- w:var - Local to the current window.
+- t:var - Local to the current tab page.
+- g:var - global variable (also in a function).
+- `l:var` : Local to a function.
+- s:var - Local to a :source'ed Vim script.
+- a:var - Function argument (only inside a function).
+- v:var - Global, predefined by Vim.
 
-변수를 해제하려면 :unlet 명령어를 사용한다.
+```vim
+" Example
+:let test_var = "test"
+:let test_var = 17
+:echo test_var
+
+:set textwidth=80
+:echo &textwidth
+:let &textwidth = &textwidth + 10
+:set textwidth?
+:let &l:number = 1
+
+:let @a = "hello"
+```
+
+
+
+변수를 해제하려면 `:unlet` 명령어를 사용한다.
 
 변수가 정의되어 있는지 잘 모를 경우 !를 붙이면 정의되어 있지 않더라도 에러가 발생하지 않는다.
 
