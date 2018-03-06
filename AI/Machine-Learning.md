@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Machine Learning
-category: MachineLearning
-tags: MachineLearning
+category: AI
+tags: [AI, ML]
 ---
 
 &nbsp;
