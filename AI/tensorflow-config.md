@@ -9,19 +9,23 @@ tags: [AI, tensorflow]
 
 # TensorFlow - Configuration
 
-## MacOS
-
 #### Install *<u>pip</u>* and *<u>virtualenv</u>*
+
+##### - MacOS
 
 > $ sudo easy_install pip
 >
 > $ sudo -H pip install —upgrade virtualenv
 
-#### Create a virtualenv environment
+##### - Ubuntu
+
+> $ sudo apt install python3-pip python3-dev python-virtualenv
+
+#### Create a *<u>virtualenv</u>* environment
 
 > $ virtualenv —system-site-packages -p python3 \<target_directory>
 
-#### Activate the virtualenv environment
+#### Activate the *<u>virtualenv</u>* environment
 
 > $ source ./\<target_directory>/bin/activate
 
@@ -29,7 +33,7 @@ tags: [AI, tensorflow]
 
 > $ pip3 install —upgrade tensorflow
 
-#### Deactivate the virtualenv environment
+#### Deactivate the *<u>virtualenv</u>* environment
 
 > $ deactivate
 
