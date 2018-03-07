@@ -30,8 +30,14 @@ tags: [web, html5]
 ##### Attributes
 
 - id: 문서 전체에서 고유한 값을 부여한다.
-
 - class: 유사한 요소를 분류한다.
+
+#### Tags
+
+- html, head, title, body
+- p, br
+- a, img, input
+- div, span
 
 #### DOM (Document Object Model)
 
