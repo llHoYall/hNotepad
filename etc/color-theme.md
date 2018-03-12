@@ -11,11 +11,56 @@ tags: color-theme
 
 My favorite color theme
 
+## HoYa
+
+```css
+Color    	Hex     256	Color       Hex     256
+-----------------------------------------------
+BG: 		#1c1c1c	234	FG: 		#c6c6c6 251
+BLACK:		#262626	235	BR BLACK:	#3a3a3a 237
+RED:		#af5f5f	131	BR RED:		#d75f5f 167
+GREEN:		#878700	100	BR GREEN:	#afaf5f 143
+YELLOW:		#d7875f	173	BR YELLOW:	#ffd787 222
+BLUE:		#5f87af	 67	BR BLUE:	#87afd7 110
+MAGENTA:	#875f87	 96	BR MAGENTA:	#af87af 139
+CYAN:		#5f8787	 66	BR CYAN:	#87afaf 109
+WHITE:		#767676	243	BR WHITE:	#c6c6c6 251
+```
+
+```css
+Color    	Hex     256	Color       Hex     256
+-----------------------------------------------
+BG:			#121212	233	FG:			#dadada 253
+BLACK:		#949494 246	BR BLACK:	#bcbcbc 250
+RED:		#ff5f5f 203	BR RED:		#ffafaf 217
+GREEN:		#87af5f 107	BR GREEN:	#afd787 150
+YELLOW:		#ffaf5f 215	BR YELLOW:	#ffd7af	223
+BLUE:		#87afd7 110	BR BLUE:	#afd7ff 153
+MAGENTA:	#d7afff 183	BR MAGENTA:	#ffd7ff 225
+CYAN:		#008787  30	BR CYAN:	#00afaf 37
+WHITE:		#dadada 253 BR WHITE:	#eeeeee 255
+```
+
 ## Obsidian (Eclipse 256)
 
 ## Wombat (Vim 16)
 
 ## Jellybean (Vim 16)
+
+```css
+Color    	Hex     16	Color       Hex     16
+----------------------------------------------
+BG:			#121212		FG:			#dedede
+CURSOR:		#ffa560
+BLACK:		#929292  0	BR BLACK:	#bdbdbd  8
+RED:		#e27373  1	BR RED:		#ffa1a1  9
+GREEN:		#94b979  2	BR GREEN:	#bddeab 10
+YELLOW:		#ffba7b  3	BR YELLOW:	#ffdca0 11
+BLUE:		#97bedc  4	BR BLUE:	#b1d8f6 12
+MAGENTA:	#e1c0fa  5	BR MAGENTA:	#fbdaff 13
+CYAN:		#00988e  6	BR CYAN:	#1ab2a8 14
+WHITE:		#dedede  7 BR WHITE:	#ffffff 15
+```
 
 ## Terminal.sexy (Terminal 16)
 
