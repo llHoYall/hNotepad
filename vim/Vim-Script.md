@@ -179,7 +179,7 @@ Formatter는 일반적으로 다음의 형태를 따른다.
 
 변수의 앞에 붙이는 문자에 따라 의미가 달라진다.
 
-- b:var - Local to the current buffer.
+- `b:var` - Local to the current buffer.
 - w:var - Local to the current window.
 - t:var - Local to the current tab page.
 - g:var - global variable (also in a function).
@@ -202,8 +202,6 @@ Formatter는 일반적으로 다음의 형태를 따른다.
 
 :let @a = "hello"
 ```
-
-
 
 변수를 해제하려면 `:unlet` 명령어를 사용한다.
 
@@ -239,7 +237,34 @@ Double quote 문자열에서는 backslash를 사용한 special 문자를 사용�
 - \\\ - \, backslash
 - \\\<C-W> - CTRL-W
 
-&nbsp;
+
+
+
+## Conditionals
+
+vim에서 조건문은 if로 처리한다. if문은 0이 아닌 정수는 true로 그 외는 false로 처리된다.
+
+```vim
+if <condition>
+	<statements>
+elseif <condition>
+	<statements>
+else
+	<statements>
+endif
+```
+
+statement들은 `|`(pipe character)로 한 줄로 연결할 수 있다.
+
+condition에서 숫자 1은 true, 0은 false로 처리된다. 숫자로 시작하는 문자열은 해당 숫자로 처리되며, 숫자로 시작하지 않는 문자열은  0으로 처리된다.
+
+조건식에서 비교를 할 때, 숫자는 상관이 없지만 문자열의 경우는 주의해야할 점이 있다.
+
+- `==` : 문자열 비교 시, 사용자 설정에 따라 case-sensitivity 여부가 결정된다.
+- `==?` : 문자열 비교 시, case-insensitive 비교를 한다.
+- `==#` : 문자열 비교 시, case-sensitive 비교를 한다.
+
+
 
 ## Expressions
 
@@ -252,7 +277,7 @@ Double quote 문자열에서는 backslash를 사용한 special 문자를 사용�
 - &*name* - option
 - @*r* - register
 
-String은 다음과 같이 dot로 연결이 가능하다.
+String은 다음과 같이 `.`(dot)로 연결이 가능하다.
 
 ~~~vim
 echo "Hello" . "World"
@@ -297,18 +322,6 @@ echo "Hello" . "World"
 &nbsp;
 
 ## Flow Control
-
-if 조건문의 문법은 다음과 같다.
-
-> if {*condition*}
-> ​	{*statements*}
-> elseif {*condition*}
-> ​	{*statements*}
-> else
-> ​	{*statements*}
-> endif
-
-
 
 for loop의 문법은 다음과 같다.
 
