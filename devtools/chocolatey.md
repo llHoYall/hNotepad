@@ -1,8 +1,8 @@
 ---
 layout: post
 title Chocolatey
-category: os
-tags: [os, windows, package manager]
+category: devtools
+tags: package-manager
 ---
 
 &nbsp;
