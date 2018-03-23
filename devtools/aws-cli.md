@@ -2,7 +2,7 @@
 layout: post
 title: AWS - CLI
 category: devtools
-tags: [devtools, aws]
+tags: aws
 ---
 
 
