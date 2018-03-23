@@ -2,7 +2,7 @@
 layout: post
 title: Javascript - Basic
 categories: [web, javascript]
-tags: [web, javascript]
+tags: javascript
 ---
 
 
