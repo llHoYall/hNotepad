@@ -1,8 +1,8 @@
 ---
 layout: post
 title: fasd
-category: tools
-tags: [tools, fasd]
+category: devtools
+tags: fasd
 ---
 
 &nbsp;
