@@ -1,8 +1,8 @@
 ---
 layout: post
 title: fzf
-category: tools
-tags: [tools, fzf]
+category: devtools
+tags: fzf
 ---
 
 &nbsp;
