@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Makefile
-category: build
-tags: [build, makefile]
+category: devtools
+tags: makefile
 ---
 
 &nbsp;
