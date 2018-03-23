@@ -1,8 +1,8 @@
 ---
 layout: post
 title: CMake - Reference
-category: build
-tags: [build, cmake]
+category: devtools
+tags: [devtools, cmake]
 ---
 
 
