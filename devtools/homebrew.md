@@ -2,7 +2,7 @@
 layout: post
 title: Homebrew
 category: devtools
-tags: [devtools, brew]
+tags: brew
 ---
 
 
