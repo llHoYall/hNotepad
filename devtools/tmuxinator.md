@@ -1,8 +1,8 @@
 ---
 layout: post
 title: tmuxinator
-category: terminal
-tags: [terminal, tmuxinator]
+category: devtools
+tags: tmuxinator
 ---
 
 &nbsp;
