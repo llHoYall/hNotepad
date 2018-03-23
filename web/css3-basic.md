@@ -2,7 +2,7 @@
 layout: post
 title: CSS3 - Basic
 categories: [web, css3]
-tags: [web, css3]
+tags: css3
 ---
 
 
