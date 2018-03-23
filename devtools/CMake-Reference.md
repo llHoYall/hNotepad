@@ -2,7 +2,7 @@
 layout: post
 title: CMake - Reference
 category: devtools
-tags: [devtools, cmake]
+tags: cmake
 ---
 
 
