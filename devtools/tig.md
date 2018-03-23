@@ -1,8 +1,8 @@
 ---
 layout: post
 title: tig
-category: tools
-tags: [tools, tig]
+category: devtools
+tags: tig
 ---
 
 &nbsp;
