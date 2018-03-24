@@ -185,7 +185,7 @@ Formatter는 일반적으로 다음의 형태를 따른다.
 - g:var - global variable (also in a function).
 - `l:var` : Local to a function.
 - s:var - Local to a :source'ed Vim script.
-- a:var - Function argument (only inside a function).
+- `a:var` : Function argument (only inside a function).
 - v:var - Global, predefined by Vim.
 
 ```vim
@@ -266,6 +266,49 @@ condition에서 숫자 1은 true, 0은 false로 처리된다. 숫자로 시작�
 
 
 
+
+## Function
+
+함수의 문법은 다음과 같다. 함수의 이름은 대문자로 시작해야한다.
+
+```vim
+function <name>(var1, var2, ...)
+	<statement>
+	[return <statement>]
+endfunction
+```
+
+명시적으로 `return`을 하지 않으면 `0`을 반환한다.
+
+`:call <func>` 명령어로 함수를 호출한다.
+
+varargs를 사용하려면 다음과 같이 한다.
+
+```vim
+function Varg(...)
+	echom a:0		" 2 (number of arguments)
+	echom a:1		" a (first argument)
+	echom a:2		" b (second argument)
+	echo a:000		" ['a', 'b'] (list of all varargs)
+endfunction
+call varg("a", "b")
+
+function Varg2(foo, ...)
+	echom a:foo		" a
+	echom a:0		" 2
+	echom a:1		" b
+	echo a:000		" ['b', 'c']
+endfunction
+call Varg2("a", "b", "c")
+```
+
+:function! 명령을 사용하여 이미 존재하는 함수를 재정의 할 수 있다.
+
+:delfunction 명령을 사용하여 함수를 삭제할 수 있다.
+
+
+
+
 ## Expressions
 
 표현으로 쓸 수 있는 것은 다음과 같다.
@@ -340,23 +383,6 @@ while loop의 문법은 다음과 같다.
 > endwhile
 
 \<CTRL-c>를 누르면 강제로 종료할 수 있다.
-
-&nbsp;
-
-## Function
-
-함수의 문법은 다음과 같다.
-
-> function {*name*}({*var1*}, {*var2*}, ...)
-> ​	{*statement*s}
-> ​	[return] {*statement*}
-> endfunction
-
-:call 명령어로 함수를 호출할 수 있다.
-
-:function! 명령을 사용하여 이미 존재하는 함수를 재정의 할 수 있다.
-
-:delfunction 명령을 사용하여 함수를 삭제할 수 있다.
 
 &nbsp;
 
