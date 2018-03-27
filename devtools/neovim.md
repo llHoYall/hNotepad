@@ -1,8 +1,8 @@
 ---
 layout: post
 title: neovim
-category: tools
-tags: [tools, neovim]
+category: devtools
+tags: neovim
 ---
 
 &nbsp;
