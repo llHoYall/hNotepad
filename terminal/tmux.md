@@ -124,3 +124,59 @@ plugins=(
 ### Customizing
 
 `$ tmux show-options -g | grep status` : status line 의 현재 설정을 확인한다.
+
+```sh
+################################################################################
+# Tmux configuration by HoYa
+################################################################################
+
+# Easy config reloads
+bind r source-file ~/.tmux.conf \; display 'Reload tmux configuration'
+
+# Default-Terminal
+set -g default-terminal "screen-256color"
+
+# Create pane
+bind  \ split-window -h -c '#{pane_current_path}'
+bind  - split-window -v -c '#{pane_current_path}'
+
+# Fast pane switching
+#if-shell "uname | grep -q Darwin" "bind -n M-Left select-pane -L; bind -n M-Down select-pane -D; bind -n M-Up select-pane -U; bind -n M-Right select-pane -R;"
+#if-shell "uname | grep -q Linux" "bind -n M-h select-pane -L; bind -n M-j select-pane -D; bind -n M-k select-pane -U; bind -n M-l select-pane -R;"
+# 위와 같이 OS dependency를 줄 수 있음.
+bind -n M-Left select-pane -L
+bind -n M-Down select-pane -D
+bind -n M-Up select-pane -U
+bind -n M-Right select-pane -R
+
+# Pane resizing
+bind -nr C-Left resize-pane -L
+bind -nr C-Down resize-pane -D
+bind -nr C-Up resize-pane -U
+bind -nr C-Right resize-pane -R
+
+# Stop renaming windows automatically
+set -g allow-rename off
+
+# Escape-Time
+set -sg escape-time 10
+
+# Notification
+set -g visual-activity on 
+set -g visual-bell on
+setw -g monitor-activity on
+
+# Status line
+set -g status-fg white
+set -g status-bg black
+set -g status-left-length 30
+set -g status-left "#[fg=green,bright] [#S]#[fg=yellow,bright] #(~/.tmux/get-uptime.sh) "
+set -g status-right "#[fg=cyan,bright]%H:%M:%S #[fg=magenta,bright]%Y-%m-%d %a "
+setw -g window-status-fg blue
+setw -g window-status-bg black
+setw -g window-status-format " #F[#I]: #W "
+setw -g window-status-current-fg black
+setw -g window-status-current-bg blue
+setw -g window-status-current-format " #F[#I]: #W "
+```
+
