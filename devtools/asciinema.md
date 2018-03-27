@@ -1,8 +1,8 @@
 ---
 layout: post
 title: asciinema
-category: tools
-tags: [tools, asciinema]
+category: devtools
+tags: asciinema
 ---
 
 &nbsp;
