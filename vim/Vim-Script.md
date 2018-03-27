@@ -314,19 +314,26 @@ call Varg2("a", "b", "c")
 표현으로 쓸 수 있는 것은 다음과 같다.
 
 - number
+  - 8진수는 0, 16진수는 0x를 숫자 앞에 붙여 표현한다. 8진수 표현 범위를 넘어서면 0을 붙여도 10진수로 처리된다.
+  - float는 3.14 혹은 7.68e3과 같이 표현한다.
+  - 숫자 끼리의 연산 중 하나라도 실수가 있다면 실수로 처리되고, 정수만 있다면 정수로 처리된다.
+
+
 - string
+  - 문자열 연결은 `.`을 사용한다. 
+  - `:echom "Hello "."World"`
+  - 문자열이 정수로 시작하지 않는다면, 산술 연산 시 0으로 처리된다.
+  - 문자열이 정수로 시작하면, 산술 연산 시 정수로 처리된다.
+  - 문자열이 실수로 시작하면, 산술 연산 시 정수부만 처리된다.
+  - " (double quote)로 문자열을 감싸면 특수 문자가 처리된다. 원치 않는다면 \ (escape) 해야한다.
+  - ' (single quote)로 문자열을 감싸면 문자 그대로 처리된다.
+  - `strlen(string)`, `len(string)` 함수로 문자열의 길이를 반환한다.
 - variable
 - $*NAME* - environment variable
 - &*name* - option
 - @*r* - register
 
-String은 다음과 같이 `.`(dot)로 연결이 가능하다.
 
-~~~vim
-echo "Hello" . "World"
-~~~
-
-&nbsp;
 
 ## Operator
 
