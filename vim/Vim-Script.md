@@ -67,7 +67,7 @@ tags: vim
 
 `:noremap <buffer>` 와 같이 `<buffer>`를 붙이면 해당 buffer에만 적용되는 local 설정이 된다.
 
-Operator-Pending 맵핑을 하게되면, 해당 내용이 실행되기 전에 Visual 모드에서 선택된 영역이 존재하면 해당 범위에 대해 동작하고, 그렇지 않다면 커서의 위치부터 새로운 위치 사이의 범위에 대해 동작한다. `:onoremap in( :<C-u>normal! f(vi(<CR>` 과 같이 `<C-u>` 를 사용하면 Visual 모드에서 선택된 영역이 취소된다. `:normal` 명령어를 사용하면, special character를 해석하지 못한다. 이 때는 `:execute "normal! gg"`와 같이 `:execute` 명령어를 사용한다.
+Operator-Pending 맵핑을 하게되면, 해당 내용이 실행되기 전에 Visual 모드에서 선택된 영역이 존재하면 해당 범위에 대해 동작하고, 그렇지 않다면 커서의 위치부터 새로운 위치 사이의 범위에 대해 동작한다. `:onoremap in( :<C-u>normal! f(vi(<CR>` 과 같이 `<C-u>` 를 사용하면 Visual 모드에서 선택된 영역이 취소된다. `:normal` 명령어를 사용하면, `<CR>` 과 같은 special character를 해석하지 못한다. 이 때는 `:execute "normal! gg"`와 같이 `:execute` 명령어를 사용한다. `:normal!`과 같이 !를 붙이면 `:nnoremap`과 같은 동작을 한다.
 
 
 
