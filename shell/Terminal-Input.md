@@ -2,7 +2,7 @@
 layout: post
 title: Terminal Input
 category: shell
-tags: [shell, bash]
+tags: bash
 ---
 
 &nbsp;
