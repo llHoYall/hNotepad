@@ -1,11 +1,9 @@
 ---
 layout: post
 title: wsl
-category: shell
-tags: [shell, wsl]
+category: devtools
+tags: wsl
 ---
-
-
 
 # WSL (Windows Subsystem for Linux)
 
