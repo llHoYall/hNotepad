@@ -335,6 +335,8 @@ call Varg2("a", "b", "c")
 
 
 
+
+
 ## Operator
 
 산술 연산
@@ -393,27 +395,7 @@ while loop의 문법은 다음과 같다.
 
 &nbsp;
 
-## List and Dictionary
-
-List는 square bracket과 comma로 만들어지며 다음의 문법을 따른다.
-
-> [item1, item2, item3, ...]
-
-Plus 연산자로 리스트를 연결할 수 있다.
-
-> list1 + list2
-
-extend 함수로 확장할 수 있다.
-
-> :call extend(list1, list2)
-
-add 함수로 중첩시킬 수 있다.
-
-> :call add(list1, list2)
-
-sort 함수로 정렬할 수 있다.
-
-
+## Dictionary
 
 Dictionary는 curly brace안에 key와 value로 만들어지며 다음의 문법을 따른다.
 
