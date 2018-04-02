@@ -2,7 +2,7 @@
 layout: post
 title: Shell Shortcut
 category: shell
-tags: [shell, bash, zsh]
+tags: [bash, zsh]
 ---
 
 &nbsp;
@@ -23,4 +23,5 @@ tags: [shell, bash, zsh]
 - **!!** : Execute last command in history
 - **!{*char*}** : Execute last command in history beginning with {char}
 - **!{*char*:p}** : Print last command in history beginning with {char}
+
 
