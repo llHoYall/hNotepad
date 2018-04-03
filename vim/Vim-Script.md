@@ -238,35 +238,6 @@ Double quote 문자열에서는 backslash를 사용한 special 문자를 사용�
 - \\\<C-W> - CTRL-W
 
 
-
-
-## Conditionals
-
-vim에서 조건문은 if로 처리한다. if문은 0이 아닌 정수는 true로 그 외는 false로 처리된다.
-
-```vim
-if <condition>
-	<statements>
-elseif <condition>
-	<statements>
-else
-	<statements>
-endif
-```
-
-statement들은 `|`(pipe character)로 한 줄로 연결할 수 있다.
-
-condition에서 숫자 1은 true, 0은 false로 처리된다. 숫자로 시작하는 문자열은 해당 숫자로 처리되며, 숫자로 시작하지 않는 문자열은  0으로 처리된다.
-
-조건식에서 비교를 할 때, 숫자는 상관이 없지만 문자열의 경우는 주의해야할 점이 있다.
-
-- `==` : 문자열 비교 시, 사용자 설정에 따라 case-sensitivity 여부가 결정된다.
-- `==?` : 문자열 비교 시, case-insensitive 비교를 한다.
-- `==#` : 문자열 비교 시, case-sensitive 비교를 한다.
-
-
-
-
 ## Function
 
 함수의 문법은 다음과 같다. 함수의 이름은 대문자로 시작해야한다.
@@ -371,29 +342,7 @@ call Varg2("a", "b", "c")
 - a =~ b: matches with
 - a !~ b: does not match with
 
-&nbsp;
 
-## Flow Control
-
-for loop의 문법은 다음과 같다.
-
-> for {*varname*} in {*listexpression*}
-> ​	{*statements*}
-> endfor
-
-
-
-while loop의 문법은 다음과 같다.
-
-> while {*condition*}
-> ​	{*statement*s}
-> ​	[continue]	" jump back to the start of the while loop; the loop continues
-> ​	[break]		" jump forward to the :endwhile; the loop is discontinued
-> endwhile
-
-\<CTRL-c>를 누르면 강제로 종료할 수 있다.
-
-&nbsp;
 
 ## Dictionary
 
