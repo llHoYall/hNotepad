@@ -2,7 +2,7 @@
 layout: post
 title: VimScript - Control
 category: vim
-tags: [vim, lists]
+tags: [vim, control]
 ---
 
 # VimScript - Control Statement
