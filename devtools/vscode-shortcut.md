@@ -80,13 +80,37 @@ tags: vscode
 ### Scroll line up/down
 - `<⌃⇞/⇟>`, `<⌃↑/↓>`
 
-### Scroll page up/down
+### ! Scroll page up/down
 
 - `<⌘⇞/⇟>`, `<⌥⇞/⇟>`
 
-### Fold (uncollapse)/Unfold (uncollapse) region
+### Fold (collapse)/Unfold (uncollapse) region
 
 - `<⌘⌥[/]>`, `<⌃⇧[/]>`
+
+### Fold (collapse)/Unfold (uncollapse) all subregions
+
+- `<⌘k><⌘[/]>`, `<⌃k><⌃[/]>`
+
+### Fold (collapse)/Unfold (uncollapse) all regions
+
+- `<⌘k><⌘0/j>`, `<⌃k><⌃o/j>`
+
+### ! Add/Remove line comment
+
+- `<⌘k><⌘c/u>`, `<⌃k><⌃c/u>`
+
+### ! Toggle line comment
+
+- `<⌘/>`, `<⌃/>`
+
+### ! Toggle block comment
+
+- `<⌥⇧a>`
+
+### Toggle word wrap
+
+- `<⌥z>`
 
 ### 커서
 
