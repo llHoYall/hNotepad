@@ -1,8 +1,8 @@
 ---
 layout: post
-title: VimScript - Lists
+title: VimScript - List
 category: vim
-tags: [vim, lists]
+tags: [vim, list]
 ---
 
 # VimScript - Lists
@@ -51,7 +51,7 @@ echo ['a', 'b'] + ['c']
 >>> ['a', 'b', 'c']
 ```
 
-## List Function
+## List Functions
 
 ```
 let foo = ['a']
