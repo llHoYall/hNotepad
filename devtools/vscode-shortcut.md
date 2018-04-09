@@ -11,30 +11,82 @@ tags: vscode
 
 ## General
 
-- `<CTRL-SHIFT-p>`, `<F1>` : Show command palette
-- `<CTRL-p>` : Quick open
-- `<CTRL-SHIFT-n>` : New window/instance
-- `<CTRL-SHIFT-w>` : Close window/instance
-- `<CTRL-,>` : User settings
-- `<CTRL-k> + <CTRL-s>` : Keyboard Shortcuts 
+### ! Show command palette
+
+- `<⌘⇧p>`, `<⌃⇧p>`
+- `<F1>`
+
+### ! Quick open
+
+- `<⌘p>`, `<⌃p>`
+
+### New window/instance
+
+- `<⌘⇧n>`, `<⌃⇧n>`
+
+### Close window/instance
+
+- `<⌘⇧w>`, `<⌃⇧w>`
+
+### ! User settings
+
+- `<⌘,>`, `<⌃,>`
+
+### ! Keyboard Shortcuts
+
+- `<⌘k><⌘s>`, `<⌃k><⌃s>`
 
 ## Basic Editing
 
-- `<CTRL-x>` : Cut line
-- `<CTRL-c>` : Copy line
-- `<ALT-UP/DOWN>` : Move line up/down
-- `<ALT-SHIFT-UP/DOWN>` : Copy line up/down
-- `<CTRL-SHIFT-k>` : Delete line
-- `<CTRL-ENTER>` : Insert line below
-- `<CTRL-SHIFT-ENTER>` : Insert line above
-- `<CTRL-SHIFT-\>` : Jump to matching bracket
-- `<CTRL-]/[>` : Indent/outdent line 
-- `<HOME> / <END>` : Go to beginning/end of line
-- `<CMD-UP/DOWN>`, `<CTRL-HOME> / <CTRL-END>`  : Go to beginning/end of file
-- `<CTRL-UP/DOWN>` : Scroll line up/down
-- `<CMD-PGUP/PGDN>`, `<ALT-PGUP/PGDN>` : Scroll page up/down
-- `<CTRL-SHIFT-[>` : Fold (collapse) region
-- `<CTRL-SHIFT-]>` : Unfold (uncollapse) region
+### ! Cut line
+
+- `<⌘x>`, `<⌃x>`
+
+### ! Copy line
+
+- `<⌘c>`, `<⌃c>`
+
+### ! Move line up/down
+
+- `<⌥↑/↓>`
+
+### ! Copy line up/down
+
+- `<⌥⇧↑/↓>`
+
+### ! Delete line
+- `<⌘⇧k>`, `<⌃⇧k>`
+
+### ! Insert line below/above
+
+- `<⌘⏎> / <⌘⇧⏎>`, `<⌃⏎> / <⌃⇧⏎>`
+
+### Jump to matching bracket
+
+- `<⌘⇧\>`, `<⌃⇧\>`
+
+### ! Indent/outdent line 
+
+- `<⌘]/[>`, `<⌃]/[>`
+
+### ! Go to beginning/end of line
+
+- `<↖︎> / <↘︎>`
+
+### ! Go to beginning/end of file
+
+- `<⌘↑/↓>`, `<⌃↖︎> / <⌃↘︎>`
+
+### Scroll line up/down
+- `<⌃⇞/⇟>`, `<⌃↑/↓>`
+
+### Scroll page up/down
+
+- `<⌘⇞/⇟>`, `<⌥⇞/⇟>`
+
+### Fold (uncollapse)/Unfold (uncollapse) region
+
+- `<⌘⌥[/]>`, `<⌃⇧[/]>`
 
 ### 커서
 
