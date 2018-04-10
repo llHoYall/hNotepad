@@ -9,16 +9,19 @@ tags: vscode
 
 # Visual Studio Code - Shortcut
 
+## Reference
+
+### on VS Code
+
+`Help -> Keyboard Shortcuts Reference`
+
+### on Web
+
+- https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
+- https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf
+- https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+
 ## General
-
-### ! Show command palette
-
-- `<⌘⇧p>`, `<⌃⇧p>`
-- `<F1>`
-
-### ! Quick open
-
-- `<⌘p>`, `<⌃p>`
 
 ### New window/instance
 
