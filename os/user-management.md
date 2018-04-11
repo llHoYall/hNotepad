@@ -48,6 +48,10 @@ sudo 권한을 주려면 다음과 같이 한다.
 	map archive = no
 ```
 
+samba에 계정 등록 및 암호 설정
+
+> $ sudo smbpasswd -a \<account>
+
 이제 서비스를 재시작한다.
 
 > $ sudo service smbd restart
