@@ -5,8 +5,6 @@ category: vim
 tags: vim
 ---
 
-&nbsp;
-
 # File
 
 ## 열기
@@ -21,7 +19,7 @@ tags: vim
 
 > :set path+={*path*}
 
-&nbsp;
+
 
 ## 저장하기
 
