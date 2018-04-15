@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React - Config
-categories: [web, javascript]
+categories: web
 tags: [javascript, react]
 ---
 
