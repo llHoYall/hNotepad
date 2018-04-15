@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS3 - Box Model
-categories: [web, css3]
+categories: web
 tags: css3
 ---
 
