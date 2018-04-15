@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS3 - Basic
-categories: [web, css3]
+categories: web
 tags: css3
 ---
 
@@ -93,5 +93,40 @@ selector[, selector] {
 selector {
     property: value !important;
 }
+```
+
+##### Length
+
+많은 CSS3 속성들은 length를 값으로 갖는다.  Length는 다음과 같은 값을 가질 수 있다.
+
+- `em` : Relative to the font-size of the element.
+- `ex` : Relative to the x-height of the current font.
+- `ch` : Relative to witdh of the "0".
+- `rem` : Relative to font-size of the root element.
+- `vw` : Relative to 1% of the width of the viewport.
+- `vh` : Relative to 1% of the height of the viewport.
+- `vmin` : Relative to 1% of viewport's smaller dimension.
+- `vmax` : Relative to 1% of viewport's larger dimension.
+- `%`
+
+
+##### Color
+
+CSS3에서 색깔을 나타내는 방법은 여러 가지가 있다.
+
+- Hexadecimal Color : `#RRGGBB`
+- RGB Color : `rgb(R, G, B)`
+- RGBA Color : `rgba(R, G, B, Opacity)`
+- HSL Color : `hsl(h, s, l)`
+- HSLA Color : `hsla(h, s, l, alpha)`
+- Predefined Color : `name`
+
+```css
+background-color: #113355;
+background-color: rgb(127, 24, 36);
+background-color: rgba(231, 34, 157, 0.5);
+background-color: hsl(180, 70%, 50%);
+background-color: hsla(120, 60%, 70%, 0.3);
+background-color: red;
 ```
 
