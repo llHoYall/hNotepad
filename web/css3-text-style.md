@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS3 - Text Style
-categories: [web, css3]
+categories: web
 tags: css3
 ---
 
@@ -13,7 +13,7 @@ tags: css3
 
   - 기본 값은 medium.
 
-  - `xx-small | x-small | small | medium | large | x-large | xx-large | smaller | larger | length (px, cm, ...) | % | initial | inherit`
+  - `xx-small | x-small | small | medium | large | x-large | xx-large | smaller | larger | length | initial | inherit`
 
   ```css
   font-size: 30px;
