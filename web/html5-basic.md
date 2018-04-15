@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HTML5 - Basic
-categories: [web, html5]
+categories: web
 tags: html5
 ---
 
