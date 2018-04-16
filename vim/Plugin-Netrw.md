@@ -2,7 +2,7 @@
 layout: post
 title: Plugin - Netrw
 category: vim
-tags: [vim, netrw]
+tags: [vim, plugin]
 ---
 
 # [Plugin] Netrw
