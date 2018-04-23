@@ -35,4 +35,7 @@ The [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/) is a copyleft lice
   https://choosealicense.com/licenses/apache-2.0/#
 - GNU GPLv3
   https://choosealicense.com/licenses/gpl-3.0/
+- License 비교표
+  https://olis.or.kr/license/compareGuide.do
+
 
