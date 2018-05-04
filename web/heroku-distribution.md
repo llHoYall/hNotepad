@@ -25,7 +25,7 @@ create-react-app으로 만든 application을 heroku로 배포해보자.
 
 > $ git init
 >
-> $ heroku create -b https://github.com/<account>/<project>
+> $ heroku create -b https://github.com/mars/create-react-app-buildpack.git
 >
 > $ git add .
 >
